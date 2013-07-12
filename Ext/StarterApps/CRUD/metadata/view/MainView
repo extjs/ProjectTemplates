@@ -113,18 +113,6 @@
                     "designerId": "b85ec3a4-7231-4b41-bddc-0964306009f7",
                     "cn": [
                         {
-                            "type": "Ext.grid.View",
-                            "reference": {
-                                "name": "viewConfig",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|displayName": "GridView"
-                            },
-                            "designerId": "e0848696-2ab7-4a84-b385-dc05b44c0700"
-                        },
-                        {
                             "type": "Ext.grid.column.Number",
                             "reference": {
                                 "name": "columns",
@@ -263,8 +251,7 @@
                                 "dock": "top",
                                 "hidden": true,
                                 "id": null,
-                                "itemId": "detailsToolbar",
-                                "ui": null
+                                "itemId": "detailsToolbar"
                             },
                             "designerId": "5f1a0063-c1e8-4aa6-b7e3-10679d10a788",
                             "cn": [
