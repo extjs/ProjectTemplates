@@ -35,8 +35,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "align": "right",
                         "itemId": "addButton",
-                        "text": "Add"
+                        "iconCls": "add",
+                        "text": null
                     },
                     "designerId": "75f1b719-faf7-4409-b018-b956257bef3d"
                 }

@@ -19,7 +19,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Edit Task"
+                "id": null,
+                "itemId": "taskFormField",
+                "title": null
             },
             "designerId": "62c8971d-3b8b-46c9-9b79-64fb1ad86ac8",
             "cn": [
@@ -33,7 +35,8 @@
                     "userConfig": {
                         "label": "Description",
                         "labelWidth": "35%",
-                        "name": "description"
+                        "name": "description",
+                        "required": true
                     },
                     "designerId": "b4e249ee-d94c-42cf-9d31-8ee5de161034"
                 },
@@ -48,8 +51,16 @@
                         "label": "Priority",
                         "labelWidth": "35%",
                         "name": "priority",
+                        "required": true,
                         "options": [
-                            "[\"Hight\", \"Normal\", \"Low\"]"
+                            "[",
+                            "    { text: \"Normal\", value: \"Normal\" },",
+                            "    { text: \"High\", value: \"High\" },",
+                            "    { text: \"Low\", value: \"Low\" }",
+                            "]"
+                        ],
+                        "usePicker": [
+                            "true"
                         ]
                     },
                     "designerId": "48258b0e-caff-4e24-8a25-1f42ccdadb78"
@@ -105,6 +116,20 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Completed",
+                        "labelWidth": "35%",
+                        "name": "completed"
+                    },
+                    "designerId": "2ef477d6-0a58-45ef-86b3-f3905a284467"
                 }
             ]
         },
@@ -118,9 +143,26 @@
             "userConfig": {
                 "itemId": "saveButton",
                 "margin": 10,
+                "ui": "action",
                 "text": "Save"
             },
             "designerId": "80e3f879-569e-4320-892d-bbeab1414e37"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": null,
+                "itemId": "deleteButton",
+                "margin": 10,
+                "ui": "decline",
+                "text": "Delete"
+            },
+            "designerId": "e054a189-69f0-4c90-999c-55b47094928e"
         }
     ]
 }

@@ -8,7 +8,9 @@
                 "height": null,
                 "width": null
             }
-        }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
     },
     "xdsVersion": "3.0.0",
     "xdsBuild": 0,
@@ -27,7 +29,6 @@
             "5e208e23-e88e-46c0-be08-c2cba9754ba1"
         ],
         "model": [
-            "90edd70a-9255-4055-a510-c5a0fd160ec9",
             "74c9a82f-781d-4a3f-822b-a85ec685aa1d"
         ],
         "resource": [

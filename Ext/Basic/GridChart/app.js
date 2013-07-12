@@ -21,7 +21,6 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'MainData',
         'CityData'
     ],
     stores: [

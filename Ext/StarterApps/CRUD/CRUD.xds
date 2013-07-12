@@ -5,9 +5,19 @@
         "sdkPath": "",
         "lineEnding": "LF",
         "genTimestamps": false,
-        "cacheBust": false
+        "cacheBust": false,
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
     },
-    "xdsVersion": "2.3.0",
+    "xdsVersion": "3.0.0",
     "xdsBuild": 0,
     "schemaVersion": 1,
     "upgradeVersion": 210000000503,

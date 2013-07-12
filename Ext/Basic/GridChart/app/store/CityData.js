@@ -26,13 +26,286 @@ Ext.define('MyApp.store.CityData', {
         me.callParent([Ext.apply({
             autoLoad: false,
             model: 'MyApp.model.CityData',
-            storeId: 'MyJsonStore1',
+            storeId: 'CityData',
+            data: [
+                {
+                    city: 'City1',
+                    avghigh: 64,
+                    avglow: 40,
+                    chartdata: [
+                        {
+                            month: 'January',
+                            high: 43,
+                            low: 30,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'February',
+                            high: 46,
+                            low: 35,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'March',
+                            high: 56,
+                            low: 42,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'April',
+                            high: 59,
+                            low: 50,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'May',
+                            high: 70,
+                            low: 59,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'June',
+                            high: 80,
+                            low: 73,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'July',
+                            high: 86,
+                            low: 71,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'August',
+                            high: 88,
+                            low: 74,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'September',
+                            high: 79,
+                            low: 67,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'October',
+                            high: 71,
+                            low: 59,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'November',
+                            high: 50,
+                            low: 40,
+                            avghigh: 24,
+                            avglow: 40
+                        },
+                        {
+                            month: 'December',
+                            high: 45,
+                            low: 36,
+                            avghigh: 24,
+                            avglow: 40
+                        }
+                    ]
+                },
+                {
+                    city: 'City2',
+                    avghigh: 74,
+                    avglow: 50,
+                    chartdata: [
+                        {
+                            month: 'January',
+                            high: 53,
+                            low: 40,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'February',
+                            high: 56,
+                            low: 45,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'March',
+                            high: 66,
+                            low: 52,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'April',
+                            high: 69,
+                            low: 60,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'May',
+                            high: 80,
+                            low: 69,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'June',
+                            high: 90,
+                            low: 83,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'July',
+                            high: 96,
+                            low: 81,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'August',
+                            high: 98,
+                            low: 84,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'September',
+                            high: 89,
+                            low: 77,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'October',
+                            high: 81,
+                            low: 69,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'November',
+                            high: 60,
+                            low: 50,
+                            avghigh: 24,
+                            avglow: 50
+                        },
+                        {
+                            month: 'December',
+                            high: 55,
+                            low: 46,
+                            avghigh: 24,
+                            avglow: 50
+                        }
+                    ]
+                },
+                {
+                    city: 'City3',
+                    avghigh: 44,
+                    avglow: 20,
+                    chartdata: [
+                        {
+                            month: 'January',
+                            high: 23,
+                            low: 10,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'February',
+                            high: 26,
+                            low: 15,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'March',
+                            high: 36,
+                            low: 22,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'April',
+                            high: 39,
+                            low: 20,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'May',
+                            high: 50,
+                            low: 39,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'June',
+                            high: 60,
+                            low: 53,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'July',
+                            high: 66,
+                            low: 51,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'August',
+                            high: 68,
+                            low: 54,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'September',
+                            high: 59,
+                            low: 47,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'October',
+                            high: 51,
+                            low: 39,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'November',
+                            high: 30,
+                            low: 20,
+                            avghigh: 24,
+                            avglow: 20
+                        },
+                        {
+                            month: 'December',
+                            high: 25,
+                            low: 16,
+                            avghigh: 24,
+                            avglow: 20
+                        }
+                    ]
+                }
+            ],
             proxy: {
-                type: 'ajax',
-                url: 'citydata.json',
+                type: 'memory',
                 reader: {
-                    type: 'json',
-                    root: 'data'
+                    type: 'json'
                 }
             }
         }, cfg)]);

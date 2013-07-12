@@ -1,7 +1,25 @@
 {
     "name": "TaskList",
-    "settings": {},
-    "xdsVersion": "2.3.0",
+    "settings": {
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true
+    },
+    "xdsVersion": "3.0.0",
     "xdsBuild": 0,
     "schemaVersion": 1,
     "upgradeVersion": 210000000503,
@@ -10,7 +28,6 @@
         "view": [
             "077ff75c-1551-4c16-b8b1-6c179ae7abaa",
             "1f2aa174-7fca-4eb5-9083-a68ef92560e7",
-            "5a67732b-82f1-4f27-a6dd-2514d396fd43",
             "dc9a4e43-ca0f-4e76-b9bf-ccb94c325c5d"
         ],
         "store": [

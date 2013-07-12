@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "MainData",
             "CityData"
         ],
         "stores": [

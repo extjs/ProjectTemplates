@@ -1,15 +1,25 @@
 {
     "name": "Navigation",
-    "settings": {},
-    "xdsVersion": "2.3.0",
+    "settings": {
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
     "xdsBuild": 0,
     "schemaVersion": 1,
     "upgradeVersion": 210000000503,
     "framework": "ext42",
     "viewOrderMap": {
         "view": [
-            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
-            "51664173-3dd3-4c65-bc8c-fcec064068ab"
+            "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62"
         ],
         "store": [],
         "controller": [

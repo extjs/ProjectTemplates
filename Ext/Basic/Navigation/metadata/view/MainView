@@ -11,7 +11,7 @@
         "designer|initialView": true,
         "layout": "border"
     },
-    "designerId": "51664173-3dd3-4c65-bc8c-fcec064068ab",
+    "designerId": "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
     "cn": [
         {
             "type": "Ext.panel.Panel",
@@ -21,26 +21,68 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|region": "north",
-                "height": 100,
-                "itemId": "headerPanel",
-                "title": "Header"
+                "layout|region": "west",
+                "layout|split": true,
+                "itemId": "menuPanel",
+                "width": 150,
+                "title": "Menu"
             },
-            "designerId": "b2bfdcc4-67b8-4a2b-9bd0-eb9ff64cebb4",
+            "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
             "cn": [
                 {
-                    "type": "Ext.button.Button",
+                    "type": "Ext.menu.Menu",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "actionButton",
-                        "margin": 10,
-                        "text": "Run Controller Action"
+                        "floating": false,
+                        "itemId": "menu",
+                        "width": null
                     },
-                    "designerId": "040b85b8-4836-4e01-90a5-25fc43f12d8c"
+                    "designerId": "25abbee3-e977-4e92-bc3a-73fcf2aea764",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": "#home",
+                                "text": "Home"
+                            },
+                            "designerId": "2d21cd52-2bd4-4f26-99f8-ecb1b8453ece"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": "#about",
+                                "text": "About Us"
+                            },
+                            "designerId": "a9c5c2c5-e485-4719-a39d-1f3df3d72393"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "href": "#contact",
+                                "text": "Contact us"
+                            },
+                            "designerId": "9f67ea74-e63c-4b04-b4c2-4130f7cbd1f8"
+                        }
+                    ]
                 }
             ]
         },
@@ -54,26 +96,50 @@
             "userConfig": {
                 "layout|region": "center",
                 "itemId": "contentPanel",
-                "bodyPadding": 10,
-                "title": "Content"
+                "layout": "card",
+                "title": null
             },
-            "designerId": "ad0d6ecc-a95a-4fa2-9119-59342137596a",
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
             "cn": [
                 {
-                    "type": "Ext.XTemplate",
+                    "type": "Ext.panel.Panel",
                     "reference": {
-                        "name": "tpl",
-                        "type": "object"
+                        "name": "items",
+                        "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "implHandler": [
-                            "<div>ID: {id}</div>\r",
-                            "<div>Text: {text}</div>"
-                        ],
-                        "designer|displayName": "tpl"
+                        "itemId": "home",
+                        "width": null,
+                        "title": "Home"
                     },
-                    "designerId": "2b2289e6-ece8-4394-ba0e-0c7187105e12"
+                    "designerId": "6e0310e2-3829-40e2-acea-c3d80afea341"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "about",
+                        "title": "About Us"
+                    },
+                    "designerId": "daf95a82-9e4f-4afd-b806-c2cc1b902fad"
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "contact",
+                        "title": "Contact Us"
+                    },
+                    "designerId": "bdce8a33-1e17-42fa-bdbd-f2e50d0d22da"
                 }
             ]
         }

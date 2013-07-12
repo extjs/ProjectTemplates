@@ -15,13 +15,12 @@
         "views": [
             "MainView",
             "TaskList",
-            "DetailPanel",
             "FormPanel"
         ],
         "controllers": [
             "Tasks"
         ],
-        "name": "MyApp"
+        "name": "TasksList"
     },
     "designerId": "application"
 }

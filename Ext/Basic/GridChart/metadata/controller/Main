@@ -55,7 +55,7 @@
                     "        select: this.selectCity\r",
                     "    },\r",
                     "    \"viewport\" : {\r",
-                    "        afterlayout: this.loadData    \r",
+                    "        afterlayout: this.loadData\r",
                     "    }\r",
                     "});"
                 ]

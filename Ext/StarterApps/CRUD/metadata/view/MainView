@@ -28,7 +28,7 @@
                 "layout": "border",
                 "collapsed": false,
                 "manageHeight": false,
-                "title": "<div class='main-title'>My Records</div>"
+                "title": "My Records"
             },
             "configAlternates": {
                 "resizable": "boolean"
