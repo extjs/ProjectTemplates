@@ -1,0 +1,27 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Record"
+        ],
+        "stores": [
+            "Tasks",
+            "Priorities"
+        ],
+        "views": [
+            "RecordForm",
+            "MainView"
+        ],
+        "autoCreateViewport": true,
+        "controllers": [
+            "Tasks"
+        ],
+        "name": "MyApp"
+    },
+    "designerId": "application"
+}

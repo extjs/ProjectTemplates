@@ -28,7 +28,7 @@
                 "layout": "border",
                 "collapsed": false,
                 "manageHeight": false,
-                "title": "My Records"
+                "title": "My Tasks"
             },
             "configAlternates": {
                 "resizable": "boolean"
@@ -78,7 +78,7 @@
                                 "id": null,
                                 "itemId": "addButton",
                                 "icon": "resources/images/add.png",
-                                "text": "Add Record"
+                                "text": "Add Task"
                             },
                             "designerId": "bea93a2e-0317-4e11-8c26-d37ea2ff1afa"
                         }
@@ -105,7 +105,7 @@
                         "bodyBorder": true,
                         "title": null,
                         "forceFit": true,
-                        "store": "Records"
+                        "store": "Tasks"
                     },
                     "configAlternates": {
                         "resizable": "boolean"
@@ -113,33 +113,32 @@
                     "designerId": "b85ec3a4-7231-4b41-bddc-0964306009f7",
                     "cn": [
                         {
-                            "type": "Ext.grid.column.Number",
+                            "type": "Ext.grid.column.Template",
                             "reference": {
                                 "name": "columns",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "id",
-                                "text": "ID",
-                                "format": "0"
+                                "text": "Task"
                             },
-                            "designerId": "96e48393-c1ae-4c17-8eef-270b5aa8effb"
-                        },
-                        {
-                            "type": "Ext.grid.column.Column",
-                            "reference": {
-                                "name": "columns",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "width": null,
-                                "dataIndex": "title",
-                                "text": "Title"
-                            },
-                            "designerId": "81a6a31f-46de-42a1-a1d0-f392d8490303",
+                            "designerId": "b23f7bd5-24b9-479c-92fe-76801bfef115",
                             "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "tpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "<span style=\"font-size: 1.1em; font-weight: bold\">{title}</span>"
+                                        ],
+                                        "designer|displayName": "tpl"
+                                    },
+                                    "designerId": "ee958bca-05fc-4ab0-929e-6375102fb93e"
+                                },
                                 {
                                     "type": "Ext.form.field.Text",
                                     "reference": {
@@ -147,7 +146,11 @@
                                         "type": "object"
                                     },
                                     "codeClass": null,
-                                    "designerId": "a8d982e0-10cc-4b88-a2b8-3bad7fdeab01"
+                                    "userConfig": {
+                                        "designer|displayName": "TitleField",
+                                        "name": "title"
+                                    },
+                                    "designerId": "bcfa43e7-112f-4f44-9173-89a57d77df7d"
                                 }
                             ]
                         },
@@ -160,7 +163,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "dataIndex": "date",
-                                "text": "Date"
+                                "text": "Due Date"
                             },
                             "designerId": "ebfa67eb-e9ef-48cb-93fa-2984599ac71f",
                             "cn": [
@@ -171,31 +174,66 @@
                                         "type": "object"
                                     },
                                     "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "DateField"
+                                    },
                                     "designerId": "dd495ae2-7537-42f3-9ded-c57eb864ca78"
                                 }
                             ]
                         },
                         {
-                            "type": "Ext.grid.column.Boolean",
+                            "type": "Ext.grid.column.Template",
                             "reference": {
                                 "name": "columns",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "dataIndex": "isFeatured",
-                                "text": "Is Featured"
+                                "text": "Priority"
                             },
-                            "designerId": "c93edf68-a369-42b4-b101-2217b6e31d2b",
+                            "designerId": "0b0fe850-a6c8-49b8-8902-253f6245214b",
                             "cn": [
                                 {
-                                    "type": "Ext.form.field.Checkbox",
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "tpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "implHandler": [
+                                            "<table>",
+                                            "    <tr>",
+                                            "        <td style=\"padding-right: 8px\">",
+                                            "            <img src=\"resources/images/{priority}.png\" title=\"{priority} Priority\" />",
+                                            "        </td>",
+                                            "    \t<td>",
+                                            "            {priority}",
+                                            "        </td>",
+                                            "    </tr>",
+                                            "</table>"
+                                        ],
+                                        "designer|displayName": "tpl"
+                                    },
+                                    "designerId": "c851ddb1-9b16-40a6-8215-53306e07d37d"
+                                },
+                                {
+                                    "type": "Ext.form.field.ComboBox",
                                     "reference": {
                                         "name": "editor",
                                         "type": "object"
                                     },
                                     "codeClass": null,
-                                    "designerId": "a3d2c07d-3d77-4ad8-b569-1d89fca93c03"
+                                    "userConfig": {
+                                        "designer|displayName": "PriorityField",
+                                        "name": "priority",
+                                        "emptyText": "Select Priority",
+                                        "editable": false,
+                                        "displayField": "priority",
+                                        "store": "Priorities",
+                                        "valueField": "priority"
+                                    },
+                                    "designerId": "28cea1d3-1a0f-4d06-866f-5ab2dd393956"
                                 }
                             ]
                         },
@@ -316,7 +354,7 @@
                                     "</tpl>",
                                     "",
                                     "<tpl if=\"!values.id\">",
-                                    "    <h1>Please select a record</h1>",
+                                    "    <h1>Click task to view</h1>",
                                     "</tpl>"
                                 ],
                                 "designer|displayName": null

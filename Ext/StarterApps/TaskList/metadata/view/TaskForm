@@ -6,11 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "height": 300,
+        "height": 275,
         "id": null,
         "itemId": "recordForm",
         "width": 475,
-        "designer|userClassName": "RecordForm",
+        "designer|userClassName": "TaskForm",
         "layout": "fit",
         "bodyPadding": null,
         "bodyStyle": [
@@ -88,27 +88,30 @@
                     "userConfig": {
                         "margin": "0 0 10",
                         "designer|displayName": "",
-                        "fieldLabel": "Date",
+                        "fieldLabel": "Due Date",
                         "labelAlign": "right",
                         "name": "date"
                     },
                     "designerId": "c8e51b7c-5854-4909-b8c6-086c4c9d7fcb"
                 },
                 {
-                    "type": "Ext.form.field.Checkbox",
+                    "type": "Ext.form.field.ComboBox",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "",
-                        "fieldLabel": "Is Featured",
+                        "fieldLabel": "Priority",
                         "labelAlign": "right",
-                        "name": "isFeatured",
-                        "boxLabel": ""
+                        "name": "priority",
+                        "emptyText": "Select Priority",
+                        "editable": false,
+                        "displayField": "priority",
+                        "store": "Priorities",
+                        "valueField": "priority"
                     },
-                    "designerId": "512048f9-b49c-4e0d-b3b4-0d07229a9ac8"
+                    "designerId": "22b16e0a-c02c-493d-bbaa-9f1c2281415e"
                 },
                 {
                     "type": "Ext.container.Container",
