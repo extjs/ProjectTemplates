@@ -1,0 +1,91 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Station"
+        ],
+        "stores": [
+            "Stations"
+        ],
+        "designer|userClassName": "Songs"
+    },
+    "designerId": "2e108d17-aa43-4245-ab88-7c58bd477077",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "view",
+                "implHandler": [
+                    "\r",
+                    "// Main navigation view\r",
+                    "var mainView = this.getMainView();\r",
+                    "\r",
+                    "// Navigate to details\r",
+                    "var panel = mainView.push({\r",
+                    "    xtype: 'detailpanel',\r",
+                    "    title: 'Playing \"' + record.data.name + '\"',\r",
+                    "    data: record.data,\r",
+                    "    bodyPadding: 10,\r",
+                    "    items: [\r",
+                    "        {\r",
+                    "            xtype: 'panel',\r",
+                    "            bodyPadding: 10,\r",
+                    "            items: [\r",
+                    "                {\r",
+                    "                    xtype: 'audio',\r",
+                    "                    url: 'songs/crash.mp3',\r",
+                    "                    loop: true,\r",
+                    "                    autoResume: true\r",
+                    "                }\r",
+                    "            ]\r",
+                    "        },\r",
+                    "        {\r",
+                    "            xtype: 'panel',\r",
+                    "            centered: true,\r",
+                    "            items: [\r",
+                    "                {\r",
+                    "                    xtype: 'image',\r",
+                    "                    src: 'images/cover.png',\r",
+                    "                    width: 250,\r",
+                    "                    height: 250\r",
+                    "                }\r",
+                    "            ]\r",
+                    "        }\r",
+                    "    ]\r",
+                    "});\r",
+                    "\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "mainview #list"
+            },
+            "designerId": "afbfe47e-f5cc-4b00-a68c-d3739574ebfc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview"
+            },
+            "designerId": "b3ec987b-29bb-4374-bf72-78beea5d6700"
+        }
+    ]
+}

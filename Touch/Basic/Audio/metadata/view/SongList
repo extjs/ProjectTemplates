@@ -1,0 +1,34 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemId": "list",
+        "designer|userClassName": "SongList",
+        "designer|userAlias": "songlist",
+        "emptyText": "No Matching Items",
+        "store": "Songs",
+        "grouped": true
+    },
+    "designerId": "3fd09888-7815-486a-8d9a-949949008923",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "<b>{name}</b>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "dbc4138f-6fe3-4621-9347-c376f8a06da7"
+        }
+    ]
+}

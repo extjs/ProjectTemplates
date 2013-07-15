@@ -1,0 +1,36 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[\r",
+            "    { id: 1, name: 'Sencha Hits' },\r",
+            "    { id: 2, name: 'All Time Greats' },\r",
+            "    { id: 3, name: 'Sencha Rock' },\r",
+            "    { id: 4, name: 'Slow Jamming Sencha' },\r",
+            "    { id: 5, name: 'Sencha Blues' }\r",
+            "]"
+        ],
+        "groupField": "name",
+        "model": "Song",
+        "storeId": "Songs",
+        "designer|userClassName": "Songs"
+    },
+    "designerId": "581b728d-3394-4272-91f1-83ed7a645df2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "ec2bfda3-f9a7-4c0c-b092-f0a7bb5271ec"
+        }
+    ]
+}
