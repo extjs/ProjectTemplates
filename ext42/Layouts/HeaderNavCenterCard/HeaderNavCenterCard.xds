@@ -1,0 +1,38 @@
+{
+    "name": "HeaderNavCenterCard",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "708ed0c6-de4e-474c-80ff-e7529187a1e9",
+            "683f2e27-fa82-4170-8174-011aa0d9e3f1"
+        ],
+        "store": [],
+        "controller": [
+            "ca4c78d1-2708-4953-95bf-531b400eb610"
+        ],
+        "model": [],
+        "resource": [
+            "556773c3-ac1f-4e63-9056-9a0492a4fc75"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

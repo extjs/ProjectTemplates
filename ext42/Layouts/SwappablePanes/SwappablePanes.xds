@@ -1,0 +1,37 @@
+{
+    "name": "SwappablePanes",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "0ec68286-9c37-4624-99e4-e485f78b39c1"
+        ],
+        "store": [],
+        "controller": [
+            "d4201dc3-e849-475b-9a30-5b3767f9fb7c"
+        ],
+        "model": [],
+        "resource": [
+            "a14f42fa-786f-48ba-92ed-01ded1bc7cdf"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "TreeMenu",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "71dac962-2e3d-4f7c-8d30-68d5e5880e83"
+        ],
+        "store": [
+            "f91e2760-99f4-4952-873b-a6998ec5c651"
+        ],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "61ba38c3-ba20-4097-a287-c65214c5f652"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

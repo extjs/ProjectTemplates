@@ -1,0 +1,103 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "designerId": "5e208e23-e88e-46c0-be08-c2cba9754ba1",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "this.loadData();"
+                ]
+            },
+            "designerId": "e469aed2-ed84-4362-88dd-a96f55ba7f51"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadData",
+                "implHandler": [
+                    "var me = this,\r",
+                    "    cityGrid = this.getCityGrid(),\r",
+                    "    cityChart = this.getCityChart();\r",
+                    "\r",
+                    "//load the grid data and setup a callback to ensure our timing is correct\r",
+                    "this.getCityGrid().getStore().load({\r",
+                    "    scope: this,\r",
+                    "\r",
+                    "    //in the callback, we'll select the first grid row that will fire the select event\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "\t\tme.getCityGrid().getSelectionModel().select(0, false, false);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "c9a3d0c9-d47b-423c-840d-8e026fea2db0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "grid[itemId=cityGrid]",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "selectCity",
+                "implHandler": [
+                    "var chart = this.getCityChart();\r",
+                    "\r",
+                    "chart.getStore().loadData(record.data.chartdata);"
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "0c3e81cb-d258-4878-a0fc-828a1e7aa7f0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "cityChart",
+                "selector": "chart#cityChart"
+            },
+            "designerId": "c91b4f23-ef42-4ebe-b1c2-bed5932d28b4"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "cityGrid",
+                "selector": "grid#cityGrid"
+            },
+            "designerId": "ee3b0f7c-2843-4bdd-9efe-2ac7d535a0f1"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"3 Series\",",
+            "        model: \"328\"",
+            "    },",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"3 Series\",",
+            "        model: \"328i\"",
+            "    },",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"5 Series\",",
+            "        model: \"529\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model L\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model LE\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model S\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Two\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Three\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Four\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT Plus\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT R/T\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "Cars",
+        "model": "Car",
+        "storeId": "Cars"
+    },
+    "designerId": "0715bfe2-d59e-40d6-9849-1b2ca705ba95",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "field",
+                    "filter"
+                ],
+                "fn": "getValues",
+                "implHandler": [
+                    "var values = [];\r",
+                    "values.push({ id: null, value: 'Select' });\r",
+                    "this.each(function(car) {\r",
+                    "    var val = car.get(field);\r",
+                    "    if (filter) {\r",
+                    "        for (var key in filter) {\r",
+                    "            if (car.get(key) != filter[key]) {\r",
+                    "                return;\r",
+                    "            }\r",
+                    "        }\r",
+                    "    }\r",
+                    "    values.push({ id: val, value: val });\r",
+                    "});\r",
+                    "return Ext.Array.unique(values);"
+                ]
+            },
+            "designerId": "0362e9ab-1d9e-4687-ae38-c24d3713919f"
+        }
+    ]
+}

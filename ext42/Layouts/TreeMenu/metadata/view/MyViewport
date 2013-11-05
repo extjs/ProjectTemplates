@@ -1,0 +1,78 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyViewport",
+        "itemId": "headerPanel",
+        "layout": "border"
+    },
+    "designerId": "71dac962-2e3d-4f7c-8d30-68d5e5880e83",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 100,
+                "itemId": "headerPanel",
+                "layout|region": "north",
+                "title": "Header"
+            },
+            "designerId": "8c973eb1-c2f4-4efc-a90b-88d510ed381f"
+        },
+        {
+            "type": "Ext.tree.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "menuPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "store": "MenuStore",
+                "title": "Panel",
+                "width": 231
+            },
+            "designerId": "9deb22f3-d8ff-4dda-b704-fc6d8dd6f866",
+            "cn": [
+                {
+                    "type": "Ext.tree.View",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "treeMenu",
+                        "width": null
+                    },
+                    "designerId": "a6ea9d5f-6bcb-41f3-88ea-8e374f1c8114"
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "contentPanel",
+                "layout|region": "center",
+                "title": "Content"
+            },
+            "designerId": "03644dfa-0eaf-487e-bfed-a743c77c31e8"
+        }
+    ]
+}

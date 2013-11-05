@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "ui": null
+    },
+    "designerId": "077ff75c-1551-4c16-b8b1-6c179ae7abaa",
+    "cn": [
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "navBar"
+            },
+            "designerId": "459934a0-f727-461f-b233-a0993b726842",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "iconCls": "add",
+                        "itemId": "addButton",
+                        "text": null
+                    },
+                    "designerId": "75f1b719-faf7-4409-b018-b956257bef3d"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "be17e96d-9ff1-45a6-8a7c-340ef2b45e2d",
+            "masterInstanceId": "1f2aa174-7fca-4eb5-9083-a68ef92560e7"
+        }
+    ]
+}

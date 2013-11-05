@@ -1,0 +1,62 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": [
+            "[\r",
+            "    { id: 1, firstName: 'Tommy', lastName: 'Maintz' },\r",
+            "    { id: 2, firstName: 'Rob', lastName: 'Dougan' },\r",
+            "    { id: 3, firstName: 'Ed', lastName: 'Avins' },\r",
+            "    { id: 4, firstName: 'Jamie', lastName: 'Avins' },\r",
+            "    { id: 5, firstName: 'Dave', lastName: 'Dougan' },\r",
+            "    { id: 6, firstName: 'Abraham', lastName: 'Elias' },\r",
+            "    { id: 7, firstName: 'Jacky', lastName: 'Ngyuyen' },\r",
+            "    { id: 8, firstName: 'Jay', lastName: 'Ngyuyen' },\r",
+            "    { id: 9, firstName: 'Jay', lastName: 'Robinson' },\r",
+            "    { id: 10, firstName: 'Rob', lastName: 'Avins' },\r",
+            "    { id: 11, firstName: 'Ed', lastName: 'Dougan' },\r",
+            "    { id: 12, firstName: 'Jamie', lastName: 'Poulden' },\r",
+            "    { id: 13, firstName: 'Dave', lastName: 'Spencer' },\r",
+            "    { id: 14, firstName: 'Abraham', lastName: 'Avins' },\r",
+            "    { id: 15, firstName: 'Jacky', lastName: 'Avins' },\r",
+            "    { id: 16, firstName: 'Rob', lastName: 'Kaneda' },\r",
+            "    { id: 17, firstName: 'Ed', lastName: 'Elias' },\r",
+            "    { id: 18, firstName: 'Tommy', lastName: 'Dougan' },\r",
+            "    { id: 19, firstName: 'Rob', lastName: 'Robinson' }\r",
+            "]"
+        ],
+        "designer|userClassName": "People",
+        "groupField": "lastName",
+        "model": "Person",
+        "storeId": "People"
+    },
+    "designerId": "581b728d-3394-4272-91f1-83ed7a645df2",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "ec2bfda3-f9a7-4c0c-b092-f0a7bb5271ec"
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "lastName"
+            },
+            "designerId": "b8906631-da4e-4f82-97bb-a7a39998361c"
+        }
+    ]
+}

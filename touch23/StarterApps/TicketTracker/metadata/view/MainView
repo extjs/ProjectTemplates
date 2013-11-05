@@ -1,0 +1,82 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView"
+    },
+    "designerId": "cfe0a238-a2b7-4f3c-b67d-3d3ebf654170",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "id": "ticketList",
+                "onItemDisclosure": true,
+                "store": "ticketStore",
+                "title": "Tickets"
+            },
+            "designerId": "913fe698-48aa-4020-86e0-04c63f6ce4cd",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"tickets-list-item\">",
+                            "    <div class=\"importance importance-{importance}\">{importance}</div>",
+                            "    {title}: {status}",
+                            "</div>"
+                        ]
+                    },
+                    "designerId": "b8c99c9b-56db-4090-b600-64cdaa407cf5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Navigation bar",
+                "docked": "top"
+            },
+            "designerId": "292548a7-4f83-4d6e-aec9-3db8ffcd2646",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "iconCls": "add",
+                        "id": "addTicketButton",
+                        "text": null
+                    },
+                    "designerId": "05c30a45-3c0b-4f4e-9b5b-cad9f687f443"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Maps"
+        ],
+        "models": [
+            "Location"
+        ],
+        "name": "MyApp",
+        "stores": [
+            "Locations"
+        ],
+        "views": [
+            "MainView",
+            "ListPanel"
+        ]
+    },
+    "designerId": "application"
+}

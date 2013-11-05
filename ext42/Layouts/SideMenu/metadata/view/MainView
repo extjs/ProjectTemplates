@@ -1,0 +1,122 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "a705110d-4ce3-4545-a748-7f920677364e",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 100,
+                "itemId": "headerPanel",
+                "layout": "fit",
+                "layout|region": "north",
+                "title": "Header"
+            },
+            "designerId": "a67ef7eb-1c7b-4f8d-ab53-848448de9b61"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyBorder": false,
+                "border": "0 2 0 0",
+                "collapseDirection": "left",
+                "collapsible": true,
+                "itemId": "menuPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Menu",
+                "width": 150
+            },
+            "designerId": "d83eb7c4-d001-4a6f-ac40-06b1a7603968",
+            "cn": [
+                {
+                    "type": "Ext.menu.Menu",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "floating": false,
+                        "itemId": "sideMenu",
+                        "width": null
+                    },
+                    "designerId": "d98ae1fc-6d78-4977-b341-388596148fff",
+                    "cn": [
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Menu Item"
+                            },
+                            "designerId": "c7cf3838-58ce-406f-af5e-ae3fabe6644d"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Menu Item"
+                            },
+                            "designerId": "00fce188-8b56-4537-82c1-ea1761a7f23e"
+                        },
+                        {
+                            "type": "Ext.menu.Item",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "text": "Menu Item"
+                            },
+                            "designerId": "343fc833-a565-4802-b83e-c11e6addaff9"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "contentPanel",
+                "layout|region": "center",
+                "layout|split": true,
+                "title": "Content"
+            },
+            "designerId": "c125811a-f32b-4ce6-9ac3-fa8a0babbdd4"
+        }
+    ]
+}

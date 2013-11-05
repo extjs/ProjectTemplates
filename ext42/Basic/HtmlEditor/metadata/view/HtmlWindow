@@ -1,0 +1,20 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "animCollapse": null,
+        "animateTarget": null,
+        "bodyPadding": 10,
+        "designer|userClassName": "HtmlWindow",
+        "height": 300,
+        "itemId": "htmlWindow",
+        "modal": true,
+        "title": "View HTML",
+        "width": 500
+    },
+    "designerId": "d243afac-f3de-4800-9f0f-14408abbd3a0"
+}

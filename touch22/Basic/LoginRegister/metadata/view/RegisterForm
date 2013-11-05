@@ -1,0 +1,101 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "registerform",
+        "designer|userClassName": "RegisterForm"
+    },
+    "designerId": "62ee9761-4c3f-444d-9653-931250a2298a",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Register"
+            },
+            "designerId": "a78ce03a-f002-4ef5-ab08-d3c6000e7522",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Name",
+                        "labelWidth": "40%",
+                        "name": "name"
+                    },
+                    "designerId": "059d89ee-f844-4dbf-a6de-6bd8f01607f4"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Username",
+                        "labelWidth": "40%",
+                        "name": "username"
+                    },
+                    "designerId": "c591a084-a530-4821-ab87-aee228ea9664"
+                },
+                {
+                    "type": "Ext.field.Email",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Email",
+                        "labelWidth": "40%",
+                        "name": "email",
+                        "placeHolder": "email@example.com"
+                    },
+                    "designerId": "7df2a6ad-b721-4cb6-9bf8-386cbc94bab8"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Password",
+                        "labelWidth": "40%",
+                        "name": "password"
+                    },
+                    "designerId": "01c51cad-9990-4229-a390-3fa6254ba4d9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "registerButton",
+                "margin": 20,
+                "padding": 8,
+                "text": "Register"
+            },
+            "designerId": "6af83342-ddc9-4a42-bf4a-fd989ba1b976"
+        }
+    ]
+}

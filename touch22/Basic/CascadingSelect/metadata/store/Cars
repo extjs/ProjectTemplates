@@ -1,0 +1,148 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"3 Series\",",
+            "        model: \"328\"",
+            "    },",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"3 Series\",",
+            "        model: \"328i\"",
+            "    },",
+            "    {",
+            "        maker: \"BWM\",",
+            "        series: \"5 Series\",",
+            "        model: \"529\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model L\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model LE\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Car-rolla\",",
+            "        model: \"Model S\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Two\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Three\"",
+            "    },",
+            "    {",
+            "        maker: \"Atoyot\",",
+            "        series: \"Pre Us\",",
+            "        model: \"Four\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT Plus\"",
+            "    },",
+            "    {",
+            "        maker: \"Lodge\",",
+            "        series: \"Larger\",",
+            "        model: \"SXT R/T\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "Cars",
+        "model": "Car",
+        "storeId": "Cars"
+    },
+    "designerId": "0715bfe2-d59e-40d6-9849-1b2ca705ba95",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getMakerNames",
+                "implHandler": [
+                    "var makerNames = [];",
+                    "this.each(function(car) {",
+                    "    makerNames.push(car.get('maker'));",
+                    "});",
+                    "return Ext.Array.unique(makerNames);"
+                ]
+            },
+            "designerId": "47d23f52-cdc8-4e61-ac83-1d035423b444"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "maker"
+                ],
+                "fn": "getSeriesNames",
+                "implHandler": [
+                    "var seriesNames = [];",
+                    "this.each(function(car) {",
+                    "    if (car.get('maker') == maker) {",
+                    "        seriesNames.push(car.get('series'));",
+                    "    }",
+                    "});",
+                    "return Ext.Array.unique(seriesNames);"
+                ]
+            },
+            "designerId": "b64720d4-dc8b-4e7b-99e4-d7a88a82e33f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "maker",
+                    "series"
+                ],
+                "fn": "getModelNames",
+                "implHandler": [
+                    "var modelNames = [];",
+                    "this.each(function(car) {",
+                    "    if ((car.get('maker') == maker) && (car.get('series') == series)) {",
+                    "        modelNames.push(car.get('model'));",
+                    "    }",
+                    "});",
+                    "return modelNames;"
+                ]
+            },
+            "designerId": "ca1dc329-5c44-4197-b64c-b34409f7b827"
+        }
+    ]
+}

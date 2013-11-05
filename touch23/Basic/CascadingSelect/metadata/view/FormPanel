@@ -1,0 +1,94 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "formpanel",
+        "designer|userClassName": "FormPanel"
+    },
+    "designerId": "00e7d3e8-c0c0-489d-921e-fb2fa6356c17",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "fieldset",
+                "title": "Choose a car!"
+            },
+            "designerId": "26b0e8ee-80e9-4eca-8922-c6a43f573bb2",
+            "cn": [
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "makerField",
+                        "label": "Maker",
+                        "usePicker": [
+                            "true"
+                        ]
+                    },
+                    "designerId": "6519ddf9-40f9-44be-917c-eaae85205c20"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "seriesField",
+                        "label": "Series",
+                        "usePicker": [
+                            "true"
+                        ]
+                    },
+                    "designerId": "57f1b3ff-8413-4fbc-908a-de06e892ac50"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "modelField",
+                        "label": "Model",
+                        "usePicker": [
+                            "true"
+                        ]
+                    },
+                    "designerId": "9228a547-c404-4bd3-b617-7c858d7b21ad"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "doneButton",
+                        "margin": 10,
+                        "text": "Nice choice!",
+                        "ui": null
+                    },
+                    "designerId": "87cfe0cd-30e3-4063-bf34-77b8d14092cc"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainView",
+        "layout": "border"
+    },
+    "designerId": "0ec68286-9c37-4624-99e4-e485f78b39c1",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "collapsed": true,
+                "collapsible": true,
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "West",
+                "width": 200
+            },
+            "designerId": "756c6ad9-8cef-4855-96c5-c834abb824a9"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Center",
+                "itemId": "mainRegion",
+                "layout": "border",
+                "layout|region": "center",
+                "title": null
+            },
+            "designerId": "e6f9501e-58fa-4be4-aac0-08d5c3e1cdd0",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "Center/Center",
+                        "layout|region": "center",
+                        "title": "Messages"
+                    },
+                    "designerId": "b94ee3d7-4caa-4817-8a67-cd0f02226cf7",
+                    "cn": [
+                        {
+                            "type": "Ext.toolbar.Toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "MessagesToolbar",
+                                "dock": "top"
+                            },
+                            "designerId": "692d204c-c207-4710-88b5-6bdfa7619364",
+                            "cn": [
+                                {
+                                    "type": "Ext.button.Split",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "itemId": "previewButton",
+                                        "layout|flex": null,
+                                        "text": "Preview: Bottom"
+                                    },
+                                    "designerId": "5108ccd0-7a66-45e8-8135-c6221fd4f906",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.menu.Menu",
+                                            "reference": {
+                                                "name": "menu",
+                                                "type": "object"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|displayName": "PreviewMenu",
+                                                "width": 120
+                                            },
+                                            "designerId": "f00babed-0987-4782-bf5c-9af9312c81a0",
+                                            "cn": [
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "checked": true,
+                                                        "opt": "south",
+                                                        "text": "Bottom"
+                                                    },
+                                                    "configAlternates": {
+                                                        "checked": "boolean"
+                                                    },
+                                                    "designerId": "f5097c46-09f7-4508-8a25-b10fb73a7b95",
+                                                    "customConfigs": [
+                                                        {
+                                                            "group": "(Custom Properties)",
+                                                            "name": "opt",
+                                                            "type": "string"
+                                                        },
+                                                        {
+                                                            "group": "(Custom Properties)",
+                                                            "name": "checked",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "opt": "east",
+                                                        "text": "Right"
+                                                    },
+                                                    "designerId": "19f63e53-9500-4c15-b090-dc2c9438f533",
+                                                    "customConfigs": [
+                                                        {
+                                                            "group": "(Custom Properties)",
+                                                            "name": "opt",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "Ext.menu.Item",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "frame": false,
+                                                        "opt": "hide",
+                                                        "text": "Hide"
+                                                    },
+                                                    "designerId": "de90186f-2984-40d3-844b-26f8d1dc2fe6",
+                                                    "customConfigs": [
+                                                        {
+                                                            "group": "(Custom Properties)",
+                                                            "name": "opt",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "bodyStyle": [
+                            "{\r",
+                            "    padding: '10px'\r",
+                            "}"
+                        ],
+                        "designer|displayName": "Center/South",
+                        "height": 250,
+                        "html": "I am the preview pane",
+                        "itemId": "previewPane",
+                        "layout|region": "south",
+                        "layout|split": true,
+                        "minHeight": 300,
+                        "minWidth": 300,
+                        "padding": "",
+                        "title": "Preview"
+                    },
+                    "configAlternates": {
+                        "html": "string"
+                    },
+                    "designerId": "cf9da07e-1018-4a67-ab3e-cfafa5eb9633"
+                }
+            ]
+        }
+    ]
+}

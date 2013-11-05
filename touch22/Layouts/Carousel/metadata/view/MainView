@@ -1,0 +1,144 @@
+{
+    "type": "Ext.carousel.Carousel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView"
+    },
+    "designerId": "60127843-68c1-40fc-be09-e67a6d46b252",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "itemId": "panel1"
+            },
+            "designerId": "7b7c340e-01d7-4f8a-a1a3-718478c1b8aa",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "html": "Panel 1",
+                        "itemId": "label1"
+                    },
+                    "designerId": "d0ac6a7f-8cf1-4eb0-bf1b-83ce6ca89f2a"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "itemId": "image1",
+                        "src": "images/sencha.png"
+                    },
+                    "designerId": "9e8af58b-436a-4d5e-9e3e-13a9d985e828"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "panel2"
+            },
+            "designerId": "790f2400-825a-4505-ae61-7861ff372935",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "html": "Panel 2",
+                        "itemId": "label2"
+                    },
+                    "designerId": "bf3adc58-8336-49b0-a3fc-15786dd7a09b"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "itemId": "image2",
+                        "src": "images/sencha.png"
+                    },
+                    "designerId": "9fc67162-ddee-4ab8-a61e-e87bf4bf8026"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "panel3"
+            },
+            "designerId": "df7e606e-5332-4951-8093-46ebec0dbce6",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "html": "Panel 3",
+                        "itemId": "label3"
+                    },
+                    "designerId": "ed75eca4-6511-4605-a53b-b744fbb62884"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "itemId": "image3",
+                        "src": "images/sencha.png"
+                    },
+                    "designerId": "24d48c7a-aa33-41a2-aec8-081bc2268efb"
+                }
+            ]
+        }
+    ]
+}

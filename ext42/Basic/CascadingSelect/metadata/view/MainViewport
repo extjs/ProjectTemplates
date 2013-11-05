@@ -1,0 +1,123 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "middle",
+        "container|pack": "center",
+        "designer|initialView": true,
+        "designer|userAlias": "mainviewport",
+        "designer|userClassName": "MainViewport",
+        "layout": "hbox"
+    },
+    "designerId": "f32eb8c1-4d90-4784-8243-30240cb7369b",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": 10,
+                "itemId": "form",
+                "title": "Select Car",
+                "width": 500
+            },
+            "designerId": "36195c1d-3983-4361-9de3-516a12635eea",
+            "cn": [
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "value",
+                        "editable": false,
+                        "fieldLabel": "Make",
+                        "itemId": "makerField",
+                        "labelAlign": "right",
+                        "labelWidth": 70,
+                        "layout|anchor": "100%",
+                        "valueField": "id"
+                    },
+                    "designerId": "6cb9e8a0-85cd-4843-8a44-cacaa9b35146"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "value",
+                        "editable": false,
+                        "fieldLabel": "Series",
+                        "itemId": "seriesField",
+                        "labelAlign": "right",
+                        "labelWidth": 70,
+                        "layout|anchor": "100%",
+                        "valueField": "id"
+                    },
+                    "designerId": "9d2be18f-261b-4da7-8eea-b618cb0a8292"
+                },
+                {
+                    "type": "Ext.form.field.ComboBox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "displayField": "value",
+                        "editable": false,
+                        "fieldLabel": "Model",
+                        "itemId": "modelField",
+                        "labelAlign": "right",
+                        "labelWidth": 70,
+                        "layout|anchor": "100%",
+                        "valueField": "id"
+                    },
+                    "designerId": "2f5b856e-99f3-4b56-88fd-afaef4832ef0"
+                },
+                {
+                    "type": "Ext.container.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": "middle",
+                        "container|pack": "center",
+                        "layout": "hbox",
+                        "margin": "10 0 10 0"
+                    },
+                    "designerId": "eeaab065-fee1-46fb-9ba1-0c921de7fd66",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "doneButton",
+                                "text": "Choose Car"
+                            },
+                            "designerId": "dd639517-19d3-492e-a920-fe6be32645b3"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

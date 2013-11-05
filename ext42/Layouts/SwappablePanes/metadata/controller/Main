@@ -1,0 +1,118 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "designerId": "d4201dc3-e849-475b-9a30-5b3767f9fb7c",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.control({\r",
+                    "    \"menuitem[opt]\": {\r",
+                    "        click: this.setPreviewRegion\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "f77d15bb-bfb7-4ee6-b2e9-39f5d1f540a6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "item"
+                ],
+                "fn": "setPreviewRegion",
+                "implHandler": [
+                    "var me = this,\r",
+                    "    mainRegion = me.getMainRegion(),\r",
+                    "    previewPane = me.getPreviewPane(),\r",
+                    "    previewButton = me.getPreviewButton(),\r",
+                    "    previewText = 'Preview: ' + item.text;\r",
+                    "\r",
+                    "//evalute the items custom \"opt\" property to dictate\r",
+                    "//the preview pane view state.\r",
+                    "if (item.opt !== 'hide') {\r",
+                    "    if (previewPane.isHidden()) {\r",
+                    "\t\tpreviewPane.show();\r",
+                    "    }\r",
+                    "    //remove the preview pane from the main region\r",
+                    "    //without destroying it\r",
+                    "    mainRegion.remove(previewPane, false);\r",
+                    "    //assign the new region to the preview pane\r",
+                    "    previewPane.region = item.opt;\r",
+                    "    //add the preview pane back to the main region\r",
+                    "    mainRegion.add(previewPane);\r",
+                    "} else {\r",
+                    "    if (!previewPane.isHidden()) {\r",
+                    "\t\tpreviewPane.hide();\r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "previewButton.setText(previewText);"
+                ]
+            },
+            "designerId": "1c7f4c78-69f0-4246-8b53-a9dfccc481bf"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "previewPane",
+                "selector": "panel#previewPane"
+            },
+            "designerId": "710cd2a9-0976-4181-a9aa-05b41e66a9f7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainRegion",
+                "selector": "panel#mainRegion"
+            },
+            "designerId": "6e57a1a0-351c-473a-b4ad-d51d033dfdca"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "previewButton",
+                "selector": "splitbutton#previewButton"
+            },
+            "designerId": "953ed75f-2466-4a8d-937f-fc16bbcd1219"
+        }
+    ]
+}

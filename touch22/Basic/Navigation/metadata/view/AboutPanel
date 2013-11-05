@@ -1,0 +1,30 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "aboutpanel",
+        "designer|userClassName": "AboutPanel",
+        "itemId": "aboutPanel"
+    },
+    "designerId": "f122b302-f33f-44cd-90af-3a9292063adf",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": true,
+                "html": "About Us",
+                "itemId": "aboutLabel"
+            },
+            "designerId": "c8a26905-561a-48d4-9306-20cae515702f"
+        }
+    ]
+}

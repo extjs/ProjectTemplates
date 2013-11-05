@@ -1,0 +1,36 @@
+{
+    "name": "SideMenu",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPad",
+                "builtIn": true,
+                "height": 1024,
+                "width": 768
+            },
+            "viewportOrientation": "landscape"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "04b3ce3f-3430-414d-b170-eacda58a02a6"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "64c9230d-74c6-423b-9956-bdab32b3d960"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

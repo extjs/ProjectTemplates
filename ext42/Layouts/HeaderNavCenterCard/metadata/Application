@@ -1,0 +1,19 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Main"
+        ],
+        "name": "MyApp",
+        "views": [
+            "MainView",
+            "CardStack"
+        ]
+    },
+    "designerId": "application"
+}

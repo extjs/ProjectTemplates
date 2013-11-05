@@ -1,0 +1,21 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "MyController"
+        ],
+        "models": [
+            "MyModel"
+        ],
+        "name": "MyApp",
+        "views": [
+            "MainView"
+        ]
+    },
+    "designerId": "application"
+}

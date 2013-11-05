@@ -1,0 +1,36 @@
+{
+    "name": "Carousel",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "60127843-68c1-40fc-be09-e67a6d46b252"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "fa3304bb-17ae-446e-8152-d2b449263c4f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

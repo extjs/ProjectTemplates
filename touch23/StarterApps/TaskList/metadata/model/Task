@@ -1,0 +1,72 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Task"
+    },
+    "designerId": "123a2aab-3e92-4e3a-975a-6d4e8566a2cc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "description",
+                "type": "string"
+            },
+            "designerId": "e563f67e-f683-4bee-aa0a-c3b8ab8b0a39"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "priority",
+                "type": "string"
+            },
+            "designerId": "0a2fa1a1-8009-4fa2-9ffe-aa9b9ede3fb7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "dueDate",
+                "type": "date"
+            },
+            "designerId": "6c1239b4-17e5-4119-92eb-29659566bc40"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "defaultValue": [
+                    "false"
+                ],
+                "name": "completed",
+                "type": "boolean"
+            },
+            "designerId": "949d5585-cda0-4167-b875-24626e367ef3"
+        }
+    ]
+}

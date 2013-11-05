@@ -1,0 +1,91 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userAlias": "ticketform",
+        "designer|userClassName": "TicketForm",
+        "height": 250,
+        "title": "My Form",
+        "width": 500
+    },
+    "designerId": "50acfcc9-d646-45d6-9376-9e5249e25b47",
+    "cn": [
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Title",
+                "layout|anchor": "100%",
+                "name": "title",
+                "width": 300
+            },
+            "designerId": "13e45307-161d-4d11-af15-047ce9496fef"
+        },
+        {
+            "type": "Ext.form.field.TextArea",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Description",
+                "layout|anchor": "100%",
+                "name": "description",
+                "width": 300
+            },
+            "designerId": "78fa230f-16fe-4ac8-912a-9fb54e852285"
+        },
+        {
+            "type": "Ext.form.field.Number",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Importance",
+                "layout|anchor": "100%",
+                "maxValue": 5,
+                "minValue": 1,
+                "name": "importance",
+                "value": [
+                    "1"
+                ],
+                "width": 300
+            },
+            "designerId": "01d89319-5bfc-4005-a7a3-8a741ec77d5f"
+        },
+        {
+            "type": "Ext.form.field.ComboBox",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Status",
+                "layout|anchor": "100%",
+                "name": "status",
+                "queryMode": "local",
+                "store": [
+                    "['Open','In Progress','Complete']"
+                ],
+                "width": 300
+            },
+            "configAlternates": {
+                "store": "array"
+            },
+            "designerId": "a8541857-8216-46dc-b9a2-2afdd797c270"
+        }
+    ]
+}

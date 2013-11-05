@@ -1,0 +1,35 @@
+{
+    "name": "LeftTopBottom",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "f149c9f5-3fb0-42f1-8871-9c97d2c218f2"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "ddf5f8d6-c5cd-4177-b7cf-1e9e006f44e0"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

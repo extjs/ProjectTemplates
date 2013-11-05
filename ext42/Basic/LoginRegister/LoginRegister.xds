@@ -1,0 +1,39 @@
+{
+    "name": "LoginRegister",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "7372b4da-6a89-4a02-a378-f8fe5e5b5b3d",
+            "af0e876a-ec58-4697-bddc-8668f44977fc",
+            "d5160550-a745-4763-910a-cd2a336c487c"
+        ],
+        "store": [],
+        "controller": [
+            "d1cc0c66-0a94-4c48-95da-b7881bbec645"
+        ],
+        "model": [],
+        "resource": [
+            "21d39171-39d0-4171-bbaf-901980656599"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "NavController"
+        ],
+        "models": [
+            "Ticket"
+        ],
+        "name": "TicketTracker",
+        "stores": [
+            "TicketStore"
+        ],
+        "views": [
+            "MainView",
+            "TicketView"
+        ]
+    },
+    "designerId": "application"
+}

@@ -1,0 +1,45 @@
+{
+    "type": "Ext.window.Window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "buttons": [
+            "[{",
+            "\ttext: 'Save',",
+            "\taction: 'saveTicket'",
+            "}]"
+        ],
+        "closeAction": "hide",
+        "designer|userAlias": "ticketformwindow",
+        "designer|userClassName": "TicketFormWindow",
+        "height": 300,
+        "title": "Edit Ticket",
+        "width": 500
+    },
+    "configAlternates": {
+        "buttons": "array"
+    },
+    "designerId": "e45ee073-c01e-4f45-9e5d-af68493c2e5a",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "buttons",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "b0519e0f-c250-42cb-b0e9-177ad4b0cce8",
+            "masterInstanceId": "50acfcc9-d646-45d6-9376-9e5249e25b47"
+        }
+    ]
+}

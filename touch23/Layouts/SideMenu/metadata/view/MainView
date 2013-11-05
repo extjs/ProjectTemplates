@@ -1,0 +1,119 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "layout": "hbox"
+    },
+    "designerId": "04b3ce3f-3430-414d-b170-eacda58a02a6",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Toolbar",
+                "docked": "top",
+                "title": "App"
+            },
+            "designerId": "024f5b5a-e4fe-40da-9097-5a5202d8f302"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "border": null,
+                "designer|displayName": "SideMenu",
+                "layout|flex": 1,
+                "style": "background-color: #ddf;",
+                "ui": "dark"
+            },
+            "designerId": "73273ae8-24a4-4278-97a7-945a8a6d7188",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": 10,
+                        "text": "Menu item 1"
+                    },
+                    "designerId": "aa9cc4e3-d5b5-45fb-91a4-7c60cb3275be"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": 10,
+                        "text": "Menu item 2"
+                    },
+                    "designerId": "02b7b959-dd1e-4c94-b982-3fc12a9d5d40"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "margin": 10,
+                        "text": "Menu item 3"
+                    },
+                    "designerId": "b4603225-e219-4a27-b26d-83030cb8658f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Content",
+                "height": null,
+                "layout|flex": 3,
+                "scrollable": null
+            },
+            "designerId": "7f52d294-4783-4281-8191-8995143675bc",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "designer|displayName": "Content label",
+                        "html": "Content"
+                    },
+                    "designerId": "56402d8b-975f-42ff-967e-46196b9d2806"
+                }
+            ]
+        }
+    ]
+}

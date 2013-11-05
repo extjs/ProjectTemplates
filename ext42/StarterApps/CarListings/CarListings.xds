@@ -1,0 +1,43 @@
+{
+    "name": "CarListings",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "6081e1df-fca4-4be1-a307-0c0434204fae"
+        ],
+        "store": [
+            "0315c038-557a-4e0a-8263-df261c02f018",
+            "46782a72-f446-46f1-9b63-5a9f1dc44a0a"
+        ],
+        "controller": [
+            "20791d17-a8a6-45d8-915f-da11d9e20636"
+        ],
+        "model": [
+            "44284846-393f-4336-9e37-fe0ed78e1e2a",
+            "5facafe4-e1fe-49da-a9f1-20529581bc87"
+        ],
+        "resource": [
+            "67363d08-999e-4648-b11d-5d9fe657da91"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

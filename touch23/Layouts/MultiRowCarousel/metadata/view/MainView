@@ -1,0 +1,27 @@
+{
+    "type": "Ext.carousel.Carousel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "direction": "vertical",
+        "directionLock": true,
+        "itemId": "mainView"
+    },
+    "configAlternates": {
+        "directionLock": "boolean"
+    },
+    "designerId": "b38732f4-6362-469b-93f1-9e1c49445371",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "directionLock",
+            "type": "string"
+        }
+    ]
+}

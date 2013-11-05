@@ -1,0 +1,78 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "record",
+        "designer|userClassName": "Record"
+    },
+    "designerId": "44284846-393f-4336-9e37-fe0ed78e1e2a",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "f1e46f0b-b766-478e-8e20-20fbc76c2f73"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "designerId": "d4580010-81b0-4a16-aca7-ac6aed2b950a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "designerId": "91eb2fe9-630c-4f4f-ad51-7be8bee354d3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "date",
+                "type": "date"
+            },
+            "designerId": "ac58b12c-2d03-46ff-98a6-78a8e6a6e7e2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "isFeatured",
+                "type": "boolean"
+            },
+            "designerId": "e15dfec6-8007-4849-bd2e-2f036239d51d"
+        }
+    ]
+}

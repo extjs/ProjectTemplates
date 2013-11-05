@@ -1,0 +1,42 @@
+{
+    "name": "CascadingSelect",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "00e7d3e8-c0c0-489d-921e-fb2fa6356c17"
+        ],
+        "store": [
+            "0715bfe2-d59e-40d6-9849-1b2ca705ba95"
+        ],
+        "controller": [
+            "fa3acb38-d89d-4800-9322-9ab7678b4d8e"
+        ],
+        "model": [
+            "c187695b-b3f7-4de4-b1f3-bd15ff8df549"
+        ],
+        "resource": [
+            "a90f2546-9263-4cb2-a984-3a91f4bf6e1f"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

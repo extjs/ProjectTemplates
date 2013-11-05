@@ -1,0 +1,37 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        title:'Improve Css',",
+            "        status:'Open',",
+            "        description:'improve site css',",
+            "        importance:3",
+            "    },",
+            "    {",
+            "        title:'PHP scripting',",
+            "        status:'Open',",
+            "        description:'Perform some PHP scripting',",
+            "        importance:4",
+            "    },",
+            "    {",
+            "        title:'PHP Bug',",
+            "        status:'In Progress',",
+            "        description:'remove PHP Bug',",
+            "        importance:4",
+            "    }",
+            "]"
+        ],
+        "designer|userAlias": "ticketstore",
+        "designer|userClassName": "TicketStore",
+        "model": "Ticket",
+        "storeId": "MyStore"
+    },
+    "designerId": "87797620-cc28-4a7d-bc85-61a1cee8a1fc"
+}

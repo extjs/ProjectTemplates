@@ -1,0 +1,27 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "CarForm"
+        ],
+        "models": [
+            "Car"
+        ],
+        "name": "CascadingSelect",
+        "requires": [
+            "Ext.MessageBox"
+        ],
+        "stores": [
+            "Cars"
+        ],
+        "views": [
+            "FormPanel"
+        ]
+    },
+    "designerId": "application"
+}

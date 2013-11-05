@@ -1,0 +1,282 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Records",
+        "stores": [
+            "Records"
+        ]
+    },
+    "designerId": "2856dba3-c512-4b02-8986-a3e844ab0885",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#gridPanel",
+                "designer|params": [
+                    "target",
+                    "record"
+                ],
+                "fn": "view",
+                "implHandler": [
+                    "\r",
+                    "var details = this.getDetailsPanel(),\t// Get detail panel via controller ref\r",
+                    "\ttoolbar = this.getDetailsToolbar();\t// Get detail panel toolbar via controller ref\r",
+                    "\r",
+                    "// Update the detail panel with the selected row's data\r",
+                    "details.update(record.data);\r",
+                    "\r",
+                    "// Show toolbar\r",
+                    "toolbar.show();\r",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "df446b75-e4d7-445e-89e4-61f7a5aefeae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#mainPanel #addButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "add",
+                "implHandler": [
+                    "\r",
+                    "var formWindow = Ext.create('widget.recordform'),\t// Create new form window\r",
+                    "\tform = formWindow.down('form').getForm(),\t\t// Get form within window\r",
+                    "\tmodel = Ext.create('model.record');\t\t\t\t// Create new Record model\r",
+                    "\r",
+                    "// Associate model with form\r",
+                    "form.loadRecord(model);\r",
+                    "\r",
+                    "// Show window\r",
+                    "formWindow.show();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "e36d723b-3313-48ef-ac07-dece1e00f055"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#detailsPanel #editButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "edit",
+                "implHandler": [
+                    "\r",
+                    "var data = target.up('panel').data,\t\t\t\t\t\t// Get panel's assosiated data\r",
+                    "\tstore = this.getRecordsStore(),\t\t\t\t\t\t// Get Records store\r",
+                    "\trecord = store.getById(data.id),\t\t\t\t\t// Get current record\r",
+                    "\tformWindow = Ext.create('widget.recordform'),\t\t// Create new form window\r",
+                    "\tform = formWindow.down('form').getForm();\t\t\t// Get form within window\r",
+                    "\r",
+                    "// Load record model into form\r",
+                    "form.loadRecord(record);\r",
+                    "\r",
+                    "// Show window\r",
+                    "formWindow.show();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "6c1bbf38-d9cb-47ea-9ac3-355220170579"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#recordForm #saveButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "save",
+                "implHandler": [
+                    "\r",
+                    "var form = target.up('form').getForm(),\t\t\t// Get parent form\r",
+                    "\tformWindow = target.up('window'),\t\t\t// Get parent window\r",
+                    "\tdetailsPanel = this.getDetailsPanel(),\t\t// Get details panel\r",
+                    "\tdetailsToolbar = this.getDetailsToolbar(),\t// Get detail panel toolbar\r",
+                    "\trecord = form.getRecord(),\t\t\t\t\t// Get record associated with form\r",
+                    "\tstore = this.getRecordsStore(),\t\t\t\t// Get Records store\r",
+                    "\tisNew = !record.get('id');\t\t\t\t\t// Is new if no record ID exists\r",
+                    "\r",
+                    "\r",
+                    "// Update associated record with form values\r",
+                    "var errors = form.updateRecord();\r",
+                    "\r",
+                    "// Valid\r",
+                    "if (form.isValid()) {\r",
+                    "\r",
+                    "    // Add to store if new record\r",
+                    "    if (isNew) {\r",
+                    "\r",
+                    "        // Assign the record ID\r",
+                    "        // Normally, this would be a generated ID\r",
+                    "        var id = store.getTotalCount() + 1;\r",
+                    "        record.set(\"id\", id);\r",
+                    "\r",
+                    "        // Add to store\r",
+                    "        store.add(record);\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "    // Commit changes\r",
+                    "    store.commitChanges();\r",
+                    "\r",
+                    "    // Update detail panel\r",
+                    "    detailsPanel.update(record.getData());\r",
+                    "\r",
+                    "    // Close window\r",
+                    "    formWindow.destroy();\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    "// Invalid\r",
+                    "else {\r",
+                    "\r",
+                    "    // Show errors on form\r",
+                    "    form.markInvalid(errors);\r",
+                    "\r",
+                    "}\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "f27cbf84-7243-4479-90a4-df42d4f775ab"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#recordForm #cancelButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "cancelEdit",
+                "implHandler": [
+                    "\r",
+                    "// Get the window and close it\r",
+                    "var formWindow = target.up(\"window\");\r",
+                    "\tformWindow.destroy();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "d0c4a0b7-dfc7-4587-919c-a603c5f4a4ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#detailsPanel #removeButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "remove",
+                "implHandler": [
+                    "\r",
+                    "var me = this;\r",
+                    "\r",
+                    "// Confirm this delete\r",
+                    "Ext.MessageBox.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {\r",
+                    "\r",
+                    "    // User confirmed yes\r",
+                    "    if (btn == 'yes') {\r",
+                    "\r",
+                    "        var data = target.up('panel').data,\t\t\t\t// Get assosiated data\r",
+                    "            store = me.getRecordsStore(),\t\t\t\t// Get Records store\r",
+                    "            record = store.getById(data.id),\t\t\t// Get current record\r",
+                    "            detailsPanel = me.getDetailsPanel(),\t\t// Get details panel\r",
+                    "            detailsToolbar = me.getDetailsToolbar();\t// Get details panel toolbar\r",
+                    "\r",
+                    "        // Delete from store\r",
+                    "        store.remove(record);\r",
+                    "\r",
+                    "        // Clear panel content\r",
+                    "        detailsPanel.update(null);\r",
+                    "\r",
+                    "        // Hide toolbar\r",
+                    "        detailsToolbar.hide();\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "b98ca3bb-f3ae-4325-bb62-345e81cd9b07"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailsPanel",
+                "selector": "#detailsPanel"
+            },
+            "designerId": "d5fcba7c-366a-4285-baa8-1ad5e532d2d0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailsToolbar",
+                "selector": "#detailsPanel #detailsToolbar",
+                "xtype": null
+            },
+            "designerId": "fc4ec857-1bbe-40eb-800c-d002cae9f090"
+        }
+    ]
+}

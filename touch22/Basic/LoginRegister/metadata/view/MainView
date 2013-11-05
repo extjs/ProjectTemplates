@@ -1,0 +1,105 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": null
+    },
+    "designerId": "ed028afd-d71b-4509-b56c-0ed684fd01e1",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "homePanel",
+                "layout": "fit"
+            },
+            "designerId": "6085d3bd-289c-4b10-a35a-a7e16d8f35a1",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "loginPanel"
+                    },
+                    "designerId": "aa913960-da6f-441a-8054-e5ccde7987c4",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "showLoginButton",
+                                "margin": 20,
+                                "padding": 8,
+                                "text": "Login"
+                            },
+                            "designerId": "165fcac7-2a2f-4427-9de6-8bb50444905b"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "showRegisterButton",
+                                "margin": 20,
+                                "padding": 8,
+                                "text": "Register"
+                            },
+                            "designerId": "87d07c59-f761-4de5-ab26-d2d9f9d82c05"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "itemId": "welcomePanel"
+                    },
+                    "designerId": "3623dcb2-8cb3-46a3-8363-e82aa09dbb61",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": true,
+                                "html": "Welcome!",
+                                "itemId": "welcomeLabel"
+                            },
+                            "designerId": "e61dae8d-0248-4ca9-8aab-8b56f2118ef8"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "type": "Ext.data.TreeStore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MenuStore",
+        "root": [
+            "{\r",
+            "    expanded: true,\r",
+            "    text: \"My Tree \",\r",
+            "    children: [\r",
+            "        { \r",
+            "            text: \"Group 1\", \r",
+            "            expanded: true,\r",
+            "            children: [\r",
+            "            \t{ \r",
+            "                    text: \"Menu Item 1\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 2\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 3\", \r",
+            "                    leaf: true \r",
+            "                }\r",
+            "        \t] \r",
+            "        },\r",
+            "        { \r",
+            "            text: \"Group 2\", \r",
+            "            expanded: true,\r",
+            "            children: [\r",
+            "            \t{ \r",
+            "                    text: \"Menu Item 1\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 2\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 3\", \r",
+            "                    leaf: true \r",
+            "                }\r",
+            "        \t] \r",
+            "        },\r",
+            "        { \r",
+            "            text: \"Group 3\", \r",
+            "            expanded: true,\r",
+            "            children: [\r",
+            "            \t{ \r",
+            "                    text: \"Menu Item 1\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 2\", \r",
+            "                    leaf: true \r",
+            "                },\r",
+            "                { \r",
+            "                    text: \"Menu Item 3\", \r",
+            "                    leaf: true \r",
+            "                }\r",
+            "        \t] \r",
+            "        }\r",
+            "    ]\r",
+            "}"
+        ],
+        "storeId": "MyTreeStore"
+    },
+    "designerId": "f91e2760-99f4-4952-873b-a6998ec5c651",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "designerId": "27263b1e-3386-4a06-a97f-3c4bc1f75ed9"
+        }
+    ]
+}

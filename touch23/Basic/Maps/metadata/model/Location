@@ -1,0 +1,56 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Location"
+    },
+    "designerId": "8928b0c6-6806-4a3e-8238-3778dd96d75c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "id",
+                "type": "int"
+            },
+            "designerId": "10256eb2-81a0-48ba-bba9-8140869c8a35"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "latitude",
+                "type": "float"
+            },
+            "designerId": "85be2da5-b855-49bc-bbcb-6fea2b5fdd8d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "allowNull": false,
+                "name": "longitude",
+                "type": "float"
+            },
+            "designerId": "ab054822-a64a-4491-bfd1-331cd2e2876b"
+        }
+    ]
+}

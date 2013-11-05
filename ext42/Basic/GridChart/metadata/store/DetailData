@@ -1,0 +1,14 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "DetailData",
+        "model": "CityData",
+        "storeId": "MyJsonStore"
+    },
+    "designerId": "05b92cf0-647e-4c38-b15e-58a3a5336edd"
+}

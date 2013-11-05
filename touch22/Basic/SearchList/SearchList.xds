@@ -1,0 +1,42 @@
+{
+    "name": "SearchList",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "788ec8ae-1c09-4a13-a0c9-5137ee58e6cc"
+        ],
+        "store": [
+            "581b728d-3394-4272-91f1-83ed7a645df2"
+        ],
+        "controller": [
+            "2e108d17-aa43-4245-ab88-7c58bd477077"
+        ],
+        "model": [
+            "d8fa6d3b-4852-4139-87db-576815eb250b"
+        ],
+        "resource": [
+            "d89d0007-cc29-46d5-8eab-f085e4ca16f6"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

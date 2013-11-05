@@ -1,0 +1,41 @@
+{
+    "type": "Ext.view.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ticketdataview",
+        "designer|userClassName": "TicketDataView",
+        "emptyText": "No records!",
+        "height": 250,
+        "itemSelector": "div.ticket-wrapper",
+        "store": "TicketStore",
+        "width": 400
+    },
+    "designerId": "76d10648-962f-4291-b9ce-507a9fcef315",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<tpl for\".\">",
+                    "    <div class=\"ticket-wrapper\">",
+                    "        <span class=\"title\">{title} ({importance})</span>",
+                    "        <span class=\"description\">{description}</span>",
+                    "        <span class=\"status {[values.status.toLowerCase().replace(\" \", \"-\")]}\">{status}</span>",
+                    "    </div>",
+                    "</tpl>"
+                ]
+            },
+            "designerId": "786d5bee-8dc0-4a30-a38f-6c7619f6a5eb"
+        }
+    ]
+}

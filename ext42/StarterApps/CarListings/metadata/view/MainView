@@ -1,0 +1,284 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "6081e1df-fca4-4be1-a307-0c0434204fae",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": "stretch",
+                "itemId": "leftPanel",
+                "layout": "hbox",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Car Listings",
+                "width": 500
+            },
+            "designerId": "2e17aab0-6a81-429e-ab56-ebd6641aac00",
+            "cn": [
+                {
+                    "type": "Ext.grid.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "carGrid",
+                        "layout|flex": 1,
+                        "store": "CarDataStore",
+                        "title": null
+                    },
+                    "designerId": "675363b6-8a52-414b-8d1d-cd17235955d4",
+                    "cn": [
+                        {
+                            "type": "Ext.grid.View",
+                            "reference": {
+                                "name": "viewConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "78c707bc-3756-4dfe-bfc3-e79324bf3b1b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "manufacturer",
+                                "text": "Manufacturer"
+                            },
+                            "designerId": "6b7f7bfe-bfdf-4092-8675-e172f98aef7d"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "model",
+                                "text": "Model"
+                            },
+                            "designerId": "cb4486c2-f5d9-44d2-ae98-a9213efca08b"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "price",
+                                "text": "Price"
+                            },
+                            "designerId": "cd5ec702-401d-4363-8ea1-72ccda575f0f"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "wiki",
+                                "text": "Wiki"
+                            },
+                            "designerId": "57c03967-b5a9-4742-a0da-6dc876f4f63e"
+                        },
+                        {
+                            "type": "Ext.grid.column.Column",
+                            "reference": {
+                                "name": "columns",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "dataIndex": "img",
+                                "text": "Img"
+                            },
+                            "designerId": "30e1bb89-13d1-486a-8c9b-f72d0b257447"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "centerPanel",
+                "layout": "border",
+                "layout|region": "center",
+                "title": null
+            },
+            "designerId": "253d3a6d-3776-4d6d-9ac9-fefe4789c38b",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "detailPanel",
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "layout|region": "center",
+                        "layout|split": true,
+                        "title": "Details"
+                    },
+                    "designerId": "94e81405-31aa-44ec-8f76-2293f97e8699",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "tpl",
+                                "implHandler": [
+                                    "<div style=\"padding: 10px\">\r",
+                                    "    <img src=\"data/{img}\" style=\"float: right; border: 1px solid #999\" />\r",
+                                    "    <b>Manufacturer</b>: {manufacturer}<br>\r",
+                                    "    <b>Model</b>: <a href=\"{wiki}\" target=\"_blank\">{model}</a><br>\r",
+                                    "    <b>Price</b>: {price:usMoney}<br>\r",
+                                    "</div>"
+                                ]
+                            },
+                            "designerId": "aa310fed-b45f-4f77-894c-b9f51ea19ba3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 150,
+                        "itemId": "chartPanel",
+                        "layout": "fit",
+                        "layout|flex": 1,
+                        "layout|region": "south",
+                        "layout|split": true,
+                        "title": "Data"
+                    },
+                    "designerId": "b1c29c1e-4b28-4a6e-aad6-7961e8492948",
+                    "cn": [
+                        {
+                            "type": "Ext.chart.Chart",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "animate": [
+                                    "true"
+                                ],
+                                "height": null,
+                                "insetPadding": 20,
+                                "itemId": "qualityChart",
+                                "store": "CarChartStore",
+                                "width": null
+                            },
+                            "designerId": "34b5e744-19eb-4105-ac76-65b9c446f4cc",
+                            "cn": [
+                                {
+                                    "type": "Ext.chart.axis.Category",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fields": [
+                                            "name"
+                                        ],
+                                        "title": "Quality"
+                                    },
+                                    "designerId": "212b4d24-508c-4ccb-829f-86b639749445"
+                                },
+                                {
+                                    "type": "Ext.chart.axis.Numeric",
+                                    "reference": {
+                                        "name": "axes",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fields": [
+                                            "rating"
+                                        ],
+                                        "majorTickSteps": 4,
+                                        "maximum": 5,
+                                        "minimum": 0,
+                                        "minorTickSteps": null,
+                                        "position": "bottom",
+                                        "title": "Score"
+                                    },
+                                    "designerId": "798cb167-3cf9-4173-b6bd-8747b7d1a245"
+                                },
+                                {
+                                    "type": "Ext.chart.series.Column",
+                                    "reference": {
+                                        "name": "series",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": [
+                                            " {",
+                                            "     display: 'insideEnd',",
+                                            "     field: 'rating',",
+                                            "     color: '#333',",
+                                            "     \"text-anchor\": 'middle'",
+                                            " }"
+                                        ],
+                                        "xField": "name",
+                                        "yField": [
+                                            "rating"
+                                        ]
+                                    },
+                                    "designerId": "f4dfa8fe-667e-4d2a-8d4c-d45ad0a40029"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

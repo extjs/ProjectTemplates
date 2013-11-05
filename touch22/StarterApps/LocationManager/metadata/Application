@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Locations"
+        ],
+        "models": [
+            "Location"
+        ],
+        "name": "MyApp",
+        "requires": [
+            "Ext.MessageBox"
+        ],
+        "stores": [
+            "Locations"
+        ],
+        "views": [
+            "MainView",
+            "ListPanel",
+            "FormPanel"
+        ]
+    },
+    "designerId": "application"
+}

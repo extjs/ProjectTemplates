@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": false,
+        "designer|userAlias": "slide",
+        "designer|userClassName": "Slide",
+        "itemId": "slide",
+        "layout": "fit",
+        "ui": ""
+    },
+    "designerId": "74dab547-9cde-4462-8ed5-815e85aacf83"
+}

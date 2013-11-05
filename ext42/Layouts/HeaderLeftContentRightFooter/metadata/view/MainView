@@ -1,0 +1,96 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "570ee77a-0bfc-47b0-bb1b-7772ff3b7215",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 150,
+                "itemId": "headerPanel",
+                "layout|region": "north",
+                "layout|split": false,
+                "title": "Header"
+            },
+            "designerId": "50c244fe-da31-4fb5-87f9-0ca07b0edb20"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "centerPanel",
+                "layout|region": "center",
+                "layout|split": true,
+                "title": "Content"
+            },
+            "designerId": "a8ea999e-caee-40aa-aae8-e8bb6cac3932"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "leftPanel",
+                "layout|region": "west",
+                "layout|split": true,
+                "title": "Left",
+                "width": 200
+            },
+            "designerId": "4e40eb5a-6ac5-4ebd-a72e-8e52c98fdbf8"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "rightPanel",
+                "layout|region": "east",
+                "layout|split": true,
+                "title": "Right",
+                "width": 200
+            },
+            "designerId": "42591753-568e-44d8-9c7c-937e4e0cd8e7"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 150,
+                "itemId": "footerPanel",
+                "layout|region": "south",
+                "layout|split": false,
+                "title": "Footer"
+            },
+            "designerId": "12aee047-a8ca-4218-ac89-d6543b5a595a"
+        }
+    ]
+}

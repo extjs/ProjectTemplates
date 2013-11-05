@@ -1,0 +1,168 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "formpanel",
+        "designer|userClassName": "FormPanel"
+    },
+    "designerId": "dc9a4e43-ca0f-4e76-b9bf-ccb94c325c5d",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": null,
+                "itemId": "taskFormField",
+                "title": null
+            },
+            "designerId": "62c8971d-3b8b-46c9-9b79-64fb1ad86ac8",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Description",
+                        "labelWidth": "35%",
+                        "name": "description",
+                        "required": true
+                    },
+                    "designerId": "b4e249ee-d94c-42cf-9d31-8ee5de161034"
+                },
+                {
+                    "type": "Ext.field.Select",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Priority",
+                        "labelWidth": "35%",
+                        "name": "priority",
+                        "options": [
+                            "[",
+                            "    { text: \"Normal\", value: \"Normal\" },",
+                            "    { text: \"High\", value: \"High\" },",
+                            "    { text: \"Low\", value: \"Low\" }",
+                            "]"
+                        ],
+                        "required": true,
+                        "usePicker": [
+                            "true"
+                        ]
+                    },
+                    "designerId": "48258b0e-caff-4e24-8a25-1f42ccdadb78"
+                },
+                {
+                    "type": "Ext.field.DatePicker",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Due Date",
+                        "labelWidth": "35%",
+                        "name": "dueDate",
+                        "placeHolder": null
+                    },
+                    "designerId": "703c67a2-9abb-4e4c-9c65-40c7df873fe2",
+                    "cn": [
+                        {
+                            "type": "Ext.picker.Date",
+                            "reference": {
+                                "name": "picker",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "27f2b73b-05a8-439b-8231-fdfa855983c3",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "doneButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Done"
+                                    },
+                                    "designerId": "3c661544-db6a-4f25-93a8-29d9a96a0387"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "cancelButton",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Cancel"
+                                    },
+                                    "designerId": "72042193-e7b6-410b-941e-0f43a1ee2d77"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Toggle",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Completed",
+                        "labelWidth": "35%",
+                        "name": "completed"
+                    },
+                    "designerId": "2ef477d6-0a58-45ef-86b3-f3905a284467"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "saveButton",
+                "margin": 10,
+                "text": "Save",
+                "ui": "action"
+            },
+            "designerId": "80e3f879-569e-4320-892d-bbeab1414e37"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": null,
+                "itemId": "deleteButton",
+                "margin": 10,
+                "text": "Delete",
+                "ui": "decline"
+            },
+            "designerId": "e054a189-69f0-4c90-999c-55b47094928e"
+        }
+    ]
+}

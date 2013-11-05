@@ -1,0 +1,127 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Navigation"
+    },
+    "designerId": "02e19093-9c6b-4222-8b96-2632f82d7303",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onLaunch",
+                "implHandler": [
+                    "\r",
+                    "/**\r",
+                    "* The following code implements simple navigation by\r",
+                    "* using the URL hash (#) to indicate the active view\r",
+                    "*\r",
+                    "* The following values are always equal\r",
+                    "* hash = active menu 'itemId' = active panel 'itemId' + 'Panel'\r",
+                    "*/\r",
+                    "\r",
+                    "// Use var for controller\r",
+                    "var ctrl = this;\r",
+                    "\r",
+                    "// Init the Ext history utility\r",
+                    "Ext.History.init();\r",
+                    "\r",
+                    "// Navigate on hash change\r",
+                    "Ext.History.on('change', function(hash) {\r",
+                    "    ctrl.navigate(hash);\r",
+                    "});\r",
+                    "\r",
+                    "// Navigate if initial hash is provided\r",
+                    "var hash = window.location.hash;\r",
+                    "if (hash) {\r",
+                    "    ctrl.navigate(hash);\r",
+                    "}\r",
+                    ""
+                ]
+            },
+            "designerId": "87ba2aab-4c6c-4582-a261-5c0f0fb1fac8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "id"
+                ],
+                "fn": "navigate",
+                "implHandler": [
+                    "\r",
+                    "// Remove # from id if present\r",
+                    "if (id[0] == '#') id = id.slice(1);\r",
+                    "\r",
+                    "// Get views\r",
+                    "var menu = this.getMenu(),\r",
+                    "    content = this.getContentPanel();\r",
+                    "\r",
+                    "// Set active view\r",
+                    "content.layout.setActiveItem(id + 'Panel');\r",
+                    "\r",
+                    "// Set menu and page title\r",
+                    "// Iterate through each menu item\r",
+                    "this.getMenu().items.each(function(item) {\r",
+                    "\r",
+                    "    // Active\r",
+                    "    if (item.href == '#' + id) {\r",
+                    "        // Disable\r",
+                    "        item.disable();\r",
+                    "        // Set page title to menu item text\r",
+                    "        window.document.title = item.text;\r",
+                    "    }\r",
+                    "\r",
+                    "    // Inactive\r",
+                    "    else {\r",
+                    "        item.enable();\r",
+                    "    }\r",
+                    "\r",
+                    "});\r",
+                    ""
+                ]
+            },
+            "designerId": "010efca5-ac49-4bce-9f68-0ddca6bee936"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "contentPanel",
+                "selector": "#contentPanel"
+            },
+            "designerId": "e376e823-b564-494d-ae35-b5c93c355ea7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "menu",
+                "selector": "#menu"
+            },
+            "designerId": "41f0624a-4a22-408d-8277-bf77cccabf9b"
+        }
+    ]
+}

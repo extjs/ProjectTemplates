@@ -1,0 +1,56 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "fit"
+    },
+    "designerId": "d6960af2-e51e-4b00-9831-1a8c019bca68",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "topBar"
+            },
+            "designerId": "4989521c-4156-470f-af2d-7ef64191e2d0"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "contentPanel"
+            },
+            "designerId": "44875bd5-f745-4c7e-9323-49325f192f28"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "itemId": "bottomBar"
+            },
+            "designerId": "5f1c5c9b-e9e5-44da-b36d-276100e39540"
+        }
+    ]
+}

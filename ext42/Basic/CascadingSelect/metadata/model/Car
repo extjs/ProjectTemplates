@@ -1,0 +1,53 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Car"
+    },
+    "designerId": "c187695b-b3f7-4de4-b1f3-bd15ff8df549",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "maker",
+                "type": "string"
+            },
+            "designerId": "46d99050-fe57-4448-aa6d-6437af11ef64"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "series",
+                "type": "string"
+            },
+            "designerId": "6d1607b8-8904-4532-88f9-cacc99870ae1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "model",
+                "type": "string"
+            },
+            "designerId": "403f1dda-190b-407c-9e09-48bc2206bb1c"
+        }
+    ]
+}

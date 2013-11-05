@@ -1,0 +1,211 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Account"
+    },
+    "designerId": "d1cc0c66-0a94-4c48-95da-b7881bbec645",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #loginButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "showLogin",
+                "implHandler": [
+                    "\r",
+                    "// Create new login form window\r",
+                    "var login = Ext.create(\"widget.loginform\");\r",
+                    "\r",
+                    "// Show window\r",
+                    "login.show();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "248ef2ec-21bb-4597-827d-8f1f852a0cd0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginform #loginButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "doLogin",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('form'),\t\t\t\t// Login form\r",
+                    "    formWindow = button.up('window'),\t\t// Login form window\r",
+                    "    values = form.getValues(),\t\t\t\t// Form values\r",
+                    "    loginPanel = this.getLoginPanel(),\t\t// Panel shown when logged out\r",
+                    "    logoutPanel = this.getLogoutPanel();\t// Panel shown when logged in\r",
+                    "\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show logout panel\r",
+                    "    logoutPanel.show();\r",
+                    "\r",
+                    "\t// Close window\r",
+                    "    formWindow.destroy();\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show login failure error\r",
+                    "    Ext.Msg.alert(\"Login Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Login using server-side authentication service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/login\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// Just run success for now\r",
+                    "successCallback();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "1baa76c5-83ed-4136-8387-f140774b4804"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #registerButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "showRegister",
+                "implHandler": [
+                    "\r",
+                    "// Create new register form window\r",
+                    "var register = Ext.create(\"widget.registerform\");\r",
+                    "\r",
+                    "// Show window\r",
+                    "register.show();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "05ccfad2-d354-47d2-9951-9c2fabe80946"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "registerform #registerButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "doRegister",
+                "implHandler": [
+                    "\r",
+                    "var form = button.up('form'),\t\t\t\t// Register form\r",
+                    "    formWindow = button.up('window'),\t\t// Register form window\r",
+                    "    values = form.getValues(),\t\t\t\t// Form values\r",
+                    "    loginPanel = this.getLoginPanel(),\t\t// Panel shown when logged out\r",
+                    "    logoutPanel = this.getLogoutPanel();\t// Panel shown when logged in\r",
+                    "\r",
+                    "// Success\r",
+                    "var successCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Hide login panel\r",
+                    "    loginPanel.hide();\r",
+                    "\r",
+                    "    // Show logout panel\r",
+                    "    logoutPanel.show();\r",
+                    "\r",
+                    "\t// Close window\r",
+                    "    formWindow.destroy();\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "// Failure\r",
+                    "var failureCallback = function(resp, ops) {\r",
+                    "\r",
+                    "    // Show registration failure error\r",
+                    "    Ext.Msg.alert(\"Registration Failure\", resp);\r",
+                    "\r",
+                    "};\r",
+                    "\r",
+                    "\r",
+                    "// TODO: Register using server-side registration service\r",
+                    "// Ext.Ajax.request({\r",
+                    "//\t\turl: \"/register\",\r",
+                    "//\t\tparams: values,\r",
+                    "//\t\tsuccess: successCallback,\r",
+                    "//\t\tfailure: failureCallback\r",
+                    "// });\r",
+                    "\r",
+                    "// Just run success for now\r",
+                    "successCallback();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "11c4471a-e939-403b-a168-6c5ae153f539"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginPanel",
+                "selector": "mainview #loginPanel"
+            },
+            "designerId": "5add388c-9c63-44dd-9e6f-22c2fa42d303"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "logoutPanel",
+                "selector": "mainview #logoutPanel"
+            },
+            "designerId": "ed32f1b6-c698-469a-aa52-03b0994b409a"
+        }
+    ]
+}

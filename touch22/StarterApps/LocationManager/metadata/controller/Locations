@@ -1,0 +1,490 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Locations",
+        "models": [
+            "Location"
+        ],
+        "stores": [
+            "Locations"
+        ]
+    },
+    "designerId": "18d4d1e9-030e-49f3-9c66-d5c8d2e8ff2d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "showButtons",
+                "implHandler": [
+                    "// Do we have any locations to show?\r",
+                    "var locationCount = Ext.getStore('Locations').getCount(),\r",
+                    "    hasLocations = (locationCount !== 0);\r",
+                    "\r",
+                    "// Show the \"add location\" button\r",
+                    "this.getAddLocationButton().show();\r",
+                    "\r",
+                    "// Show the \"list locations\" button if we should\r",
+                    "if (hasLocations) {\r",
+                    "    this.getListLocationsButton().show();\r",
+                    "} else {\r",
+                    "    this.getListLocationsButton().hide();\r",
+                    "}"
+                ]
+            },
+            "designerId": "abcccb9e-4798-4e28-850d-3daa3ddf1a71"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "hideButtons",
+                "implHandler": [
+                    "// Show both buttons on the toolbar\r",
+                    "this.getAddLocationButton().hide();\r",
+                    "this.getListLocationsButton().hide();"
+                ]
+            },
+            "designerId": "b462ebcb-9cad-4543-852b-76747ac9def0"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "str",
+                    "callback"
+                ],
+                "fn": "geocodeString",
+                "implHandler": [
+                    "// Build a Google Maps geocoder and its options\r",
+                    "var geocoder = new google.maps.Geocoder(),\r",
+                    "    options = { address: str };\r",
+                    "\r",
+                    "// Turn the string into a location\r",
+                    "geocoder.geocode(options, function(results, status) {\r",
+                    "    if (status == \"OK\") {\r",
+                    "        callback(results[0].geometry.location);\r",
+                    "    } else {\r",
+                    "        callback(null);\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "a48111dd-be37-4284-b902-4f5f8c517833"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapView",
+                "selector": "mainview #map",
+                "xtype": "Ext.Map"
+            },
+            "designerId": "01471434-5c16-4948-b7df-affd8c6e2d20"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #addLocationButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onAddLocationTap",
+                "implHandler": [
+                    "// Show the \"add new location\" panel\r",
+                    "this.getMainView().push({\r",
+                    "    xtype: 'formpanel',\r",
+                    "    title: 'New location'\r",
+                    "});\r",
+                    "\r",
+                    "// Hide the toolbar buttons\r",
+                    "this.hideButtons();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "ea3d7a3c-2862-4e38-87ba-f42acfc579f1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview",
+                "xtype": "Ext.navigation.View"
+            },
+            "designerId": "52556649-13b2-49d6-93aa-91c841e70dc1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #listPanel list",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLocationTap",
+                "implHandler": [
+                    "// Build the location\r",
+                    "var latitude = record.get('latitude'),\r",
+                    "    longitude = record.get('longitude'),\r",
+                    "    location = new google.maps.LatLng(latitude, longitude);\r",
+                    "\r",
+                    "// Find the map\r",
+                    "var map = this.getMapView();\r",
+                    "\r",
+                    "// Center the map at the location\r",
+                    "map.setMapOptions({\r",
+                    "    center: location\r",
+                    "});\r",
+                    "\r",
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();\r",
+                    "\r",
+                    "// Remove the location list panel\r",
+                    "this.getMainView().pop();"
+                ],
+                "name": "disclose"
+            },
+            "designerId": "6b16e3ac-e415-4444-a270-fe0e11f5d9fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mapPanel",
+                "selector": "mainview #mapPanel",
+                "xtype": "Ext.Panel"
+            },
+            "designerId": "f4e79960-f6b3-447c-9f7b-d75cf3b09cf2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #listLocationsButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onListLocationsTap",
+                "implHandler": [
+                    "// Show the list panel view\r",
+                    "this.getMainView().push({\r",
+                    "    xtype: 'listpanel',\r",
+                    "    title: 'List spot'\r",
+                    "});\r",
+                    "\r",
+                    "// Hide toolbar buttons\r",
+                    "this.hideButtons();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "81d0542a-9789-4d79-bf2c-7eac73c619d6"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addLocationButton",
+                "selector": "mainview #addLocationButton",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "dd8a5f0f-c15b-455a-8d7f-b2368dd052fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "listLocationsButton",
+                "selector": "mainview #listLocationsButton",
+                "xtype": "Ext.Button"
+            },
+            "designerId": "2029ba1b-926c-4f1d-91b2-0cd3ee088744"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview",
+                "designer|targetType": "Ext.navigation.View",
+                "fn": "onBack",
+                "implHandler": [
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();"
+                ],
+                "name": "back"
+            },
+            "designerId": "85b85329-4652-4739-80dc-89be9616302e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newLocationMap",
+                "selector": "mainview #newLocationMap"
+            },
+            "designerId": "5666b552-9296-43d0-bd66-01489c68d83e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview",
+                "designer|targetType": "Ext.navigation.View",
+                "fn": "onStart",
+                "implHandler": [
+                    "// Show toolbar buttons\r",
+                    "this.showButtons();"
+                ],
+                "name": "activate"
+            },
+            "designerId": "3f8a40a1-3579-48de-b854-73f37b43b9af"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #locationTextField",
+                "designer|targetType": "Ext.field.Text",
+                "fn": "onNewLocationPositionChange",
+                "implHandler": [
+                    "// Find the map\r",
+                    "var map = this.getNewLocationMap().getMap();\r",
+                    "\r",
+                    "// Build a marker if there isn't one\r",
+                    "if (!this.newLocationMapMarker) {\r",
+                    "    this.newLocationMapMarker = new google.maps.Marker();\r",
+                    "}\r",
+                    "\r",
+                    "// Hide the map marker\r",
+                    "this.newLocationMapMarker.setMap(null);\r",
+                    "\r",
+                    "// Geocode the string\r",
+                    "var me = this;\r",
+                    "this.geocodeString(newValue, function(position) {\r",
+                    "\r",
+                    "    // Move the map to the position\r",
+                    "    map.setOptions({\r",
+                    "        center: position,\r",
+                    "        zoom: 15\r",
+                    "    });\r",
+                    "\r",
+                    "    // Drop a marker there\r",
+                    "    me.newLocationMapMarker.setOptions({\r",
+                    "        map: map,\r",
+                    "        position: position,\r",
+                    "        animation: google.maps.Animation.DROP\r",
+                    "    });\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "change"
+            },
+            "designerId": "ba174bd0-c111-428a-981c-0c52b9321fc6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #saveLocationButton",
+                "designer|targetType": "Ext.Button",
+                "fn": "onSaveLocationButtonTap",
+                "implHandler": [
+                    "// Get the form and its values\r",
+                    "var form = this.getNewLocationForm(),\r",
+                    "    values = form.getValues();\r",
+                    "\r",
+                    "// Get the locations store\r",
+                    "var store = Ext.getStore('Locations');\r",
+                    "\r",
+                    "// Get the map object\r",
+                    "var map = this.getMapView().getMap();\r",
+                    "\r",
+                    "// Geocode the string, and then...\r",
+                    "var me = this;\r",
+                    "this.geocodeString(values.location, function(position) {\r",
+                    "\r",
+                    "    // If there's a valid position...\r",
+                    "    if (position) {\r",
+                    "\r",
+                    "        // Add this to the store\r",
+                    "        store.add({\r",
+                    "            name: values.name,\r",
+                    "            description: values.description,\r",
+                    "            latitude: position.lat(),\r",
+                    "            longitude: position.lng()\r",
+                    "        });\r",
+                    "\r",
+                    "        // Build a list of markers if we don't have one\r",
+                    "        if (!me.markers) {\r",
+                    "            me.markers = [];\r",
+                    "        }\r",
+                    "\r",
+                    "        // Drop a marker\r",
+                    "        var marker = new google.maps.Marker({\r",
+                    "            position: position,\r",
+                    "            map: map,\r",
+                    "            animation: google.maps.Animation.DROP\r",
+                    "        });\r",
+                    "        me.markers.push(marker);\r",
+                    "\r",
+                    "        // Move the map there\r",
+                    "        map.setOptions({\r",
+                    "            center: position\r",
+                    "        });\r",
+                    "\r",
+                    "        // Go back to the map view\r",
+                    "        me.getMainView().pop();\r",
+                    "\r",
+                    "        // Show the navbar buttons\r",
+                    "        me.showButtons();\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "designerId": "9903e3bb-24e6-494f-a84c-05ac85be9b9b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "newLocationForm",
+                "selector": "mainview #formPanel"
+            },
+            "designerId": "14208b4e-2bd9-40e4-9dc2-c6de7e54e546"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #listPanel list",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLocationSwipe",
+                "implHandler": [
+                    "// Build the title and message\r",
+                    "var title = 'Delete',\r",
+                    "    message = 'Delete ' + record.get('name') + '?';\r",
+                    "\r",
+                    "// Confirm the deletion, and then...\r",
+                    "var messageBox = new Ext.MessageBox();\r",
+                    "var me = this;\r",
+                    "messageBox.confirm(title, message, function(response) {\r",
+                    "\r",
+                    "    // If we get a \"yes\"...\r",
+                    "    if (response == 'yes') {\r",
+                    "\r",
+                    "        // Get the store\r",
+                    "        var store = Ext.getStore('Locations');\r",
+                    "\r",
+                    "        // Do the deletion from the store\r",
+                    "        store.remove(record);\r",
+                    "\r",
+                    "        // Find and remove the marker\r",
+                    "        me.markers.forEach(function(marker, index) {\r",
+                    "\r",
+                    "            // Get the values to compare\r",
+                    "            var markerLat = marker.getPosition().lat(),\r",
+                    "                markerLng = marker.getPosition().lng(),\r",
+                    "                removedLat = record.get('latitude'),\r",
+                    "                removedLng = record.get('longitude');\r",
+                    "\r",
+                    "            // Should we remove them?\r",
+                    "            // This will remove two markers at the same location.\r",
+                    "            if ((markerLat == removedLat) && (markerLng == removedLng)) {\r",
+                    "                marker.setMap(null);\r",
+                    "                me.markers.splice(index, 1);\r",
+                    "            }\r",
+                    "\r",
+                    "        });\r",
+                    "\r",
+                    "        // If we've removed the last one, go back to the main menu\r",
+                    "        if (store.getCount() === 0) {\r",
+                    "            me.getMainView().pop();\r",
+                    "            me.showButtons();\r",
+                    "        }\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "});"
+                ],
+                "name": "itemswipe"
+            },
+            "designerId": "0eee4cf8-7228-44d0-9e5a-4e06320b30df"
+        }
+    ]
+}

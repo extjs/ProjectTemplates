@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView"
+    },
+    "designerId": "faa0b672-f068-471f-a6d3-46b660667fb3",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "498cac42-a8ff-45b0-8824-6cd6462aa473",
+            "masterInstanceId": "12fcc33d-36a7-475b-8792-6b6c96745316"
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": false,
+                "container|align": "center",
+                "docked": "top",
+                "itemId": "navBar"
+            },
+            "designerId": "0f1bbba6-fd7c-4481-b01a-5619bf8837f8",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "action",
+                        "itemId": "menuButton",
+                        "text": "Menu"
+                    },
+                    "designerId": "4e669aad-cf0b-4bd8-bc1b-a90720ca5001"
+                }
+            ]
+        }
+    ]
+}

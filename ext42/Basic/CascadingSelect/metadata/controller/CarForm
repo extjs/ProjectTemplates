@@ -1,0 +1,236 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CarForm"
+    },
+    "designerId": "fa3acb38-d89d-4800-9322-9ab7678b4d8e",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "makerField",
+                "selector": "#makerField"
+            },
+            "designerId": "138d4bc4-39a4-4bdf-9990-fe94aa9592b9"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "seriesField",
+                "selector": "#seriesField"
+            },
+            "designerId": "e4e06575-22ce-4590-837f-a82f6e0365e5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "modelField",
+                "selector": "#modelField"
+            },
+            "designerId": "de0506f3-7f0a-4884-b2d7-9bc3c766df27"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "doneButton",
+                "selector": "#doneButton"
+            },
+            "designerId": "c43a75e5-a179-4359-9552-1ba4e3098363"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#form",
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onFormRender",
+                "implHandler": [
+                    "\r",
+                    "var makerField = this.getMakerField();\r",
+                    "\r",
+                    "// Populate the maker field\r",
+                    "var data = Ext.getStore('Cars').getValues('maker');\r",
+                    "    store = new Ext.data.Store({\r",
+                    "        fields: ['id', 'value'],\r",
+                    "        data: data\r",
+                    "    });\r",
+                    "makerField.bindStore(store);\r",
+                    "\r",
+                    "// Hide later parts of the form\r",
+                    "this.getSeriesField().hide();\r",
+                    "this.getModelField().hide();\r",
+                    "this.getDoneButton().hide();\r",
+                    ""
+                ],
+                "name": "render"
+            },
+            "designerId": "7c70ac97-87ee-4d88-9a3d-7d2ea4358b57"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#makerField",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "fn": "onMakerFieldChange",
+                "implHandler": [
+                    "// Variables, I do declare\r",
+                    "var seriesField = this.getSeriesField();\r",
+                    "\r",
+                    "// Special case: we chose the \"choose a maker\" option\r",
+                    "if (!newValue) {\r",
+                    "\r",
+                    "    seriesField.hide();\r",
+                    "\r",
+                    "} else {\r",
+                    "\r",
+                    "\r",
+                    "    // Clear selected series value\r",
+                    "    seriesField.setValue('');\r",
+                    "\r",
+                    "\r",
+                    "    // Update the series dropdown\r",
+                    "    var data = Ext.getStore('Cars').getValues('series', { maker: newValue }),\r",
+                    "        store = new Ext.data.Store({\r",
+                    "            fields: ['id', 'value'],\r",
+                    "            data: data\r",
+                    "        });\r",
+                    "    seriesField.bindStore(store);\r",
+                    "\r",
+                    "    // Show the series field\r",
+                    "    seriesField.show();\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "// Hide later parts of the form\r",
+                    "this.getModelField().hide();\r",
+                    "this.getDoneButton().hide();"
+                ],
+                "name": "change"
+            },
+            "designerId": "e2f4b4cf-a28c-4181-ab5c-349fc464525c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#seriesField",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "fn": "onSeriesFieldChange",
+                "implHandler": [
+                    "// Variables, I do declare\r",
+                    "var modelField = this.getModelField(),\r",
+                    "    makerField = this.getMakerField();\r",
+                    "\r",
+                    "// Special case: we chose the \"choose a series\" option\r",
+                    "if (!newValue) {\r",
+                    "\r",
+                    "    modelField.hide();\r",
+                    "\r",
+                    "} else {\r",
+                    "    \r",
+                    "    // Clear selected model value\r",
+                    "    modelField.setValue('');    \r",
+                    "\r",
+                    "    // Update the model dropdown\r",
+                    "    var data = Ext.getStore('Cars').getValues('model', { maker: makerField.getValue(), series: newValue }),\r",
+                    "        store = new Ext.data.Store({\r",
+                    "            fields: ['id', 'value'],\r",
+                    "            data: data\r",
+                    "        });\r",
+                    "    modelField.bindStore(store);\r",
+                    "\r",
+                    "    // Show the series field\r",
+                    "    modelField.show();\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "// Hide later parts of the form\r",
+                    "this.getDoneButton().hide();"
+                ],
+                "name": "change"
+            },
+            "designerId": "4ac198d5-8b30-4209-a124-c86b6aee7c81"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#modelField",
+                "designer|targetType": "Ext.form.field.ComboBox",
+                "fn": "onModelFieldChange",
+                "implHandler": [
+                    "if (newValue) {\r",
+                    "    this.getDoneButton().show();\r",
+                    "} else {\r",
+                    "    this.getDoneButton().hide();\r",
+                    "}"
+                ],
+                "name": "change"
+            },
+            "designerId": "fc7fc550-e96a-46f0-b14b-d6ec9f614e0d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#doneButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onButtonClick",
+                "implHandler": [
+                    "var title = \"That's a great car.\",\r",
+                    "    message = 'You chose a great car. Truly.';\r",
+                    "\r",
+                    "Ext.Msg.alert(title, message, Ext.emptyFn);"
+                ],
+                "name": "click"
+            },
+            "designerId": "38bcedf6-b0b2-487f-b887-258087be0fda"
+        }
+    ]
+}

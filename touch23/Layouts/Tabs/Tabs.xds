@@ -1,0 +1,36 @@
+{
+    "name": "Tabs",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPad",
+                "builtIn": true,
+                "height": 1024,
+                "width": 768
+            },
+            "viewportOrientation": "landscape"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch23",
+    "viewOrderMap": {
+        "view": [
+            "6ff421e4-b183-4a75-a035-b579678217fa"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "70760bbc-9363-4de6-bb8d-935eb11d0b3e"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

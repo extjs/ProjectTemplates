@@ -1,0 +1,64 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "padding": 10
+    },
+    "designerId": "1ac43aed-5822-42ae-bb49-db141af6328f",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "itemId": "runButton",
+                "text": "Run Action"
+            },
+            "designerId": "39c29017-68d4-4714-affa-380bebf72b19"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "detailPanel",
+                "padding": 10
+            },
+            "designerId": "525ac364-3dbb-4f61-acef-ebba1b9c9fc3",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "\r",
+                            "<div>ID: {id}</div>\r",
+                            "<div>Text: {text}</div>"
+                        ]
+                    },
+                    "designerId": "4d07d1ea-e5d4-4740-8d4e-17a3a0f8c678"
+                }
+            ]
+        }
+    ]
+}

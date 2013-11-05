@@ -1,0 +1,132 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Navigation"
+    },
+    "designerId": "b65f72c1-bee5-4e5a-9fed-ce939650a75c",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "#mainView"
+            },
+            "designerId": "890fc24b-394b-4158-9a36-29f49a8466ed"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #menuButton",
+                "designer|params": [
+                    "target"
+                ],
+                "fn": "showMenu",
+                "implHandler": [
+                    "\r",
+                    "// Get or create navigation menu\r",
+                    "var menu = this.getNavMenu();\r",
+                    "if (!menu) {\r",
+                    "    menu = Ext.create('widget.navmenu');\r",
+                    "}\r",
+                    "\r",
+                    "var menuItems = menu.getItems().items,\t\t\t\t// Menu buttons\r",
+                    "\tcurrentView = this.currentView || \"homepanel\";\t// Current view alias, default to home\r",
+                    "\r",
+                    "// Disable active view's button\r",
+                    "menuItems.forEach(function(button) {\r",
+                    "\r",
+                    "    // Get custom navView attribute\r",
+                    "    var navView = button.config.navView;\r",
+                    "\r",
+                    "    // Active button, disable\r",
+                    "    if (currentView == navView) {\r",
+                    "        button.disable();\r",
+                    "    }\r",
+                    "\r",
+                    "    // Enable all others\r",
+                    "    else {\r",
+                    "        button.enable();\r",
+                    "    }\r",
+                    "\r",
+                    "});\r",
+                    "\r",
+                    "// Show menu by menu button\r",
+                    "menu.showBy(target);\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "beb8e73c-976d-4842-a233-effc11685cea"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navmenu button",
+                "designer|targetType": "Ext.Button",
+                "fn": "navigate",
+                "implHandler": [
+                    "\r",
+                    "/**\r",
+                    "*\tThe following code enables navigation\r",
+                    "*\tby checking the custom attribute 'navView',\r",
+                    "*\twhich is the alias of the view to show\r",
+                    "*/\r",
+                    "\r",
+                    "var text = button.getText(),\t\t\t\t\t\t// Button text\r",
+                    "\tnavView = button.getInitialConfig().navView,\t// Get custom attribute 'navView'\r",
+                    "\tmainView = this.getMainView(),\t\t\t\t\t// Main navigation view\r",
+                    "\tnavMenu = this.getNavMenu();\t\t\t\t\t// Navigation menu\r",
+                    "\r",
+                    "// Add view to main view\r",
+                    "mainView.push({\r",
+                    "    xtype: navView,\r",
+                    "    title: text\r",
+                    "});\r",
+                    "\r",
+                    "// Remember current view alias\r",
+                    "this.currentView = navView;\r",
+                    "\r",
+                    "// Hide menu\r",
+                    "navMenu.hide();\r",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "designerId": "7d2ec394-96f9-46bd-afc0-b4bea517cc08"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "navMenu",
+                "selector": "#navMenu",
+                "xtype": "navmenu"
+            },
+            "designerId": "ee9ba556-0a0b-41bb-981d-cd5cda8538c8"
+        }
+    ]
+}

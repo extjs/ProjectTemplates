@@ -1,0 +1,30 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[\r",
+            "    { \r",
+            "        category: \"Animals\",\r",
+            "        values: [\"Cat\", \"Dog\", \"Bird\", \"Fish\"]\r",
+            "    },\r",
+            "    { \r",
+            "        category: \"Fruits\",\r",
+            "        values: [\"Apple\", \"Fruit\", \"Pear\", \"Bannana\"]\r",
+            "    },\r",
+            "    { \r",
+            "        category: \"Clothing\",\r",
+            "        values: [\"Shirt\", \"Pants\", \"Jacket\"]\r",
+            "    }\r",
+            "]"
+        ],
+        "designer|userClassName": "Records",
+        "model": "Record",
+        "storeId": "Records"
+    },
+    "designerId": "88692f58-6851-4b8b-af66-1fbbb08d4bc5"
+}

@@ -1,0 +1,222 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Countdown"
+    },
+    "designerId": "bc9ba71e-98b9-45b8-8dcc-184820b30439",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "complete",
+                "implHandler": [
+                    "Ext.Msg.alert('Time is up!', 'The countdown has completed');"
+                ]
+            },
+            "designerId": "dca05d32-ef13-4805-a165-70b896a8c264"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "timerDisplay",
+                "selector": "mainviewport #timerDisplay"
+            },
+            "designerId": "ab757ace-92f0-40b4-a14d-d2ea3cfa1779"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "startButton",
+                "selector": "mainviewport #startButton"
+            },
+            "designerId": "10c3da95-04f8-4d1b-bc84-e24762afb4fe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "resetButton",
+                "selector": "mainviewport #resetButton"
+            },
+            "designerId": "31020ca3-7149-4595-ad33-aa52a0c9593e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainviewport #startButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "start",
+                "implHandler": [
+                    "\r",
+                    "var DISPLAY_FORMAT = \"{0} Days, {1} Hours, {2} Minutes, {3} Seconds\";\r",
+                    "\r",
+                    "var me = this,\r",
+                    "    dateField = me.getDateField(),\r",
+                    "    timeField = me.getTimeField(),\r",
+                    "    date = dateField.getValue(),\r",
+                    "    time = timeField.getValue(),\r",
+                    "    resetButton = me.getResetButton(),\r",
+                    "    startButton = me.getStartButton(),\r",
+                    "    timerDisplay = me.getTimerDisplay();\r",
+                    "\r",
+                    "// Ensure date and time have been entered\r",
+                    "if (date && time) {\r",
+                    "\r",
+                    "    // Add time to date\r",
+                    "    date.setHours(time.getHours());\r",
+                    "    date.setMinutes(time.getMinutes());\r",
+                    "\r",
+                    "    // Ensure date is greater than present\r",
+                    "    if (date.getTime() > new Date().getTime()) {\r",
+                    "\r",
+                    "        // Set UI state\r",
+                    "        startButton.disable();\r",
+                    "        dateField.disable();\r",
+                    "        timeField.disable();\r",
+                    "        resetButton.enable();\r",
+                    "\r",
+                    "        // Variables for time units\r",
+                    "        var days, hours, minutes, seconds;\r",
+                    "\r",
+                    "        // Start timer\r",
+                    "        me.interval = setInterval(function() {\r",
+                    "\r",
+                    "            // Calculate seconds left\r",
+                    "            var currentDate = new Date().getTime(),\r",
+                    "                secondsLeft = (date - currentDate) / 1000;\r",
+                    "\r",
+                    "            if (secondsLeft <= 0) {\r",
+                    "                clearInterval(me.interval);\r",
+                    "                me.reset();\r",
+                    "                me.complete();\r",
+                    "            }\r",
+                    "\r",
+                    "            // Update state\r",
+                    "            days = parseInt(secondsLeft / 86400);\r",
+                    "            secondsLeft = secondsLeft % 86400;\r",
+                    "            hours = parseInt(secondsLeft / 3600);\r",
+                    "            secondsLeft = secondsLeft % 3600;\r",
+                    "            minutes = parseInt(secondsLeft / 60);\r",
+                    "            seconds = parseInt(secondsLeft % 60);\r",
+                    "\r",
+                    "            // Update display\r",
+                    "            timerDisplay.update(Ext.String.format(DISPLAY_FORMAT, days, hours, minutes, seconds));\r",
+                    "\r",
+                    "\r",
+                    "        }, 1000);\r",
+                    "\r",
+                    "    }\r",
+                    "\r",
+                    "    else {\r",
+                    "        Ext.Msg.alert('Alert', 'Date must be in the future.');\r",
+                    "    }\r",
+                    "\r",
+                    "}\r",
+                    "\r",
+                    "else {\r",
+                    "    Ext.Msg.alert('Alert', 'Please enter a valid start date and time.');\r",
+                    "}\r",
+                    "\r",
+                    "\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "3db943bd-20e6-4efe-9eaa-96d0ed5bed34"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainviewport #resetButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "reset",
+                "implHandler": [
+                    "\r",
+                    "var dateField = this.getDateField(),\r",
+                    "    timeField = this.getTimeField(),\r",
+                    "    resetButton = this.getResetButton(),\r",
+                    "    startButton = this.getStartButton(),\r",
+                    "    timerDisplay = this.getTimerDisplay();\r",
+                    "\r",
+                    "// Set UI state\r",
+                    "startButton.enable();\r",
+                    "dateField.enable();\r",
+                    "timeField.enable();\r",
+                    "resetButton.disable();\r",
+                    "dateField.setValue('');\r",
+                    "timeField.setValue('');\r",
+                    "\r",
+                    "// Clear interval counter\r",
+                    "clearInterval(this.interval);\r",
+                    "\r",
+                    "// Clear display\r",
+                    "timerDisplay.update('');"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "08b37002-4b9e-4f40-8994-0f0fd8bdda3b"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dateField",
+                "selector": "mainviewport  #dateField"
+            },
+            "designerId": "f8a40f50-11a3-4c5f-b5fd-fd147f068ee0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "timeField",
+                "selector": "mainviewport #timeField"
+            },
+            "designerId": "0328a19e-68dd-495b-9ea2-2a084bfaa3bc"
+        }
+    ]
+}

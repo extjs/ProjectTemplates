@@ -1,0 +1,40 @@
+{
+    "name": "LoginRegister",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "ed028afd-d71b-4509-b56c-0ed684fd01e1",
+            "5f766276-5fd4-4afa-8cf9-aad3c3c41eee",
+            "62ee9761-4c3f-444d-9653-931250a2298a"
+        ],
+        "store": [],
+        "controller": [
+            "281224ab-8461-4b2e-9888-353e3182bb15"
+        ],
+        "model": [],
+        "resource": [
+            "82da3b1e-2a17-4d60-972e-6d7d2cfca4d3"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

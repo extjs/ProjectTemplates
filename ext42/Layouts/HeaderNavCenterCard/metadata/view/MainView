@@ -1,0 +1,129 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainView",
+        "layout": "border"
+    },
+    "designerId": "708ed0c6-de4e-474c-80ff-e7529187a1e9",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 100,
+                "layout|region": "north",
+                "title": "Header"
+            },
+            "designerId": "c66db18e-0e01-4d23-8cdc-20fb54d9398c",
+            "cn": [
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "top"
+                    },
+                    "designerId": "765a42dc-33cb-4025-9b5c-cf5291059fba",
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "direction": "prev",
+                                "itemId": "prevBtn",
+                                "layout|flex": null,
+                                "text": "Previous"
+                            },
+                            "designerId": "1080a271-882d-4ee7-abc1-496d6a38a6e3",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "direction",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "direction": "next",
+                                "itemId": "nextBtn",
+                                "layout|flex": null,
+                                "text": "Next"
+                            },
+                            "designerId": "b0c11866-0f13-4694-b807-c0d549b905b9",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "direction",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.toolbar.Separator",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": null
+                            },
+                            "designerId": "fec17c18-a9ed-4590-ae38-9c158e53f78b"
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "newCard",
+                                "layout|flex": null,
+                                "text": "New Card"
+                            },
+                            "designerId": "7c578b6d-df9a-4691-b94b-010287b3c582"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center"
+            },
+            "designerId": "b0b58b66-2fd6-46af-b619-d22c8109ea0a",
+            "masterInstanceId": "683f2e27-fa82-4170-8174-011aa0d9e3f1"
+        }
+    ]
+}

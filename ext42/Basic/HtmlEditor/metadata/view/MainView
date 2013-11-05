@@ -1,0 +1,144 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView",
+        "itemId": "mainView",
+        "layout": "border"
+    },
+    "designerId": "69af8981-3b11-48c7-8740-fc34e76f474d",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "center",
+                "layout": "fit",
+                "layout|region": "center",
+                "title": "HTML Editor"
+            },
+            "designerId": "ddef7e5f-821b-4a71-9b23-736e4aeb3cee",
+            "cn": [
+                {
+                    "type": "Ext.form.field.HtmlEditor",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "buttonTips": null,
+                        "designer|displayName": "HtmlEditor",
+                        "fieldLabel": null,
+                        "itemId": null,
+                        "padding": null,
+                        "width": 150
+                    },
+                    "configAlternates": {
+                        "buttonTips": "object"
+                    },
+                    "designerId": "6706e9f1-6da6-4e1f-9747-a411fac604bb",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "buttonTips",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.toolbar.Toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "buttonTIps": null,
+                        "buttonTips": null,
+                        "container|pack": "end",
+                        "defaultAlign": null,
+                        "designer|displayName": "Toolbar",
+                        "dock": "bottom",
+                        "style": null
+                    },
+                    "configAlternates": {
+                        "style": "string",
+                        "buttonTIps": "object",
+                        "buttonTips": "object"
+                    },
+                    "designerId": "7f1188f2-767c-4f4e-bae7-5d0b92e8bb9f",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "buttonTIps",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "buttonTips",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "action": "submit",
+                                "id": null,
+                                "itemId": "submitButton",
+                                "layout|flex": null,
+                                "text": "Submit"
+                            },
+                            "designerId": "26a82558-f167-43e8-b651-318e5cb2b85f",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.button.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "action": "reset",
+                                "itemId": "resetButton",
+                                "layout|flex": null,
+                                "text": "Reset"
+                            },
+                            "designerId": "6dd8183a-fd7e-4669-9f2a-def60482be38",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "action",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

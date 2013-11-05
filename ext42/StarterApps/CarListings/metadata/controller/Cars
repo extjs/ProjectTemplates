@@ -1,0 +1,71 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Cars"
+    },
+    "designerId": "20791d17-a8a6-45d8-915f-da11d9e20636",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#carGrid",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "\r",
+                    "// Get view references\r",
+                    "var detailPanel = this.getDetailPanel(),\r",
+                    "    chart = this.getQualityChart();\r",
+                    "\r",
+                    "// Update details panel with data\r",
+                    "detailPanel.update(record.data);\r",
+                    "\r",
+                    "// Get the quality field from record\r",
+                    "var qualityData = record.get('quality');\r",
+                    "// Update chart with data\r",
+                    "chart.store.loadData(qualityData);\r",
+                    ""
+                ],
+                "name": "select",
+                "scope": "me"
+            },
+            "designerId": "64df2310-645b-40d7-8c2a-b7c16ff10930"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "detailPanel",
+                "selector": "#detailPanel"
+            },
+            "designerId": "6a416a0d-5364-4420-9d3f-5d0720394c5e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "qualityChart",
+                "selector": "#qualityChart"
+            },
+            "designerId": "24b32031-2de9-4bc1-954d-ffc2bae1d56d"
+        }
+    ]
+}

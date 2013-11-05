@@ -1,0 +1,77 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Main"
+    },
+    "designerId": "b4c0e0e4-ae50-4505-9a38-dacce915020e",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #resetButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onReset",
+                "implHandler": [
+                    "\r",
+                    "// Clear the HTML editor\r",
+                    "this.getHtmlEditor().setValue();"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "45a4ed15-543f-47c3-b783-d30eb4faed7d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "htmlEditor",
+                "selector": "#center htmleditor"
+            },
+            "designerId": "6dd6bed8-8189-44ec-9619-f9ef2e688ad3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #submitButton",
+                "designer|targetType": "Ext.button.Button",
+                "fn": "onSubmit",
+                "implHandler": [
+                    "\r",
+                    "var htmlEditor = this.getHtmlEditor(),\r",
+                    "    text = htmlEditor.getValue(),\r",
+                    "    htmlWindow = Ext.create(\"MyApp.view.HtmlWindow\");\r",
+                    "\r",
+                    "// Update the text in the window\r",
+                    "htmlWindow.update(text);\r",
+                    "\r",
+                    "// Show the window\r",
+                    "htmlWindow.show();\r",
+                    ""
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "5166f468-bb01-4c9c-8752-a057751f725f"
+        }
+    ]
+}

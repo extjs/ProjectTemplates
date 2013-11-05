@@ -1,0 +1,29 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Tasks"
+        ],
+        "models": [
+            "Task"
+        ],
+        "name": "TasksList",
+        "requires": [
+            "Ext.MessageBox"
+        ],
+        "stores": [
+            "Tasks"
+        ],
+        "views": [
+            "MainView",
+            "TaskList",
+            "FormPanel"
+        ]
+    },
+    "designerId": "application"
+}

@@ -1,0 +1,35 @@
+{
+    "name": "SideMenu",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "a705110d-4ce3-4545-a748-7f920677364e"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "78dfd286-f2d0-4843-9e8f-c71156230a59"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+.importance-1 {
+    color: #fff;
+    background-color: #d23;
+}
+
+.importance-2 {
+    color: #fff;
+    background-color: #d83;
+}
+
+.importance-3 {
+    color: #fff;
+    background-color: #1676b9;
+}
+
+.importance-4 {
+    color: #fff;
+    background-color: #7ad;
+}
+
+.importance-5 {
+    color: #000;
+    background-color: #fff;
+}
+
+.tickets-list-item .importance {
+    float: left;
+    width: 40px;
+    margin-right: 1em;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100%;
+}

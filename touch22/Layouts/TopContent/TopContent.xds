@@ -1,0 +1,36 @@
+{
+    "name": "TopContent",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPad",
+                "builtIn": true,
+                "height": 1024,
+                "width": 768
+            },
+            "viewportOrientation": "landscape"
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "d6960af2-e51e-4b00-9831-1a8c019bca68"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "25456b3e-1809-4cde-a04c-a7a57e28d2b9"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

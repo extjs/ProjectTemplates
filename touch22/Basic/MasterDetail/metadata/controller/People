@@ -1,0 +1,61 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "People",
+        "models": [
+            "Person"
+        ],
+        "stores": [
+            "People"
+        ]
+    },
+    "designerId": "2e108d17-aa43-4245-ab88-7c58bd477077",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "mainview #list",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "view",
+                "implHandler": [
+                    "\r",
+                    "// Main navigation view\r",
+                    "var mainView = this.getMainView();\r",
+                    "\r",
+                    "// Navigate to details\r",
+                    "mainView.push({\r",
+                    "    xtype: 'detailpanel',\r",
+                    "    title: \"Details\",\r",
+                    "    data: record.data\r",
+                    "});\r",
+                    ""
+                ],
+                "name": "select"
+            },
+            "designerId": "afbfe47e-f5cc-4b00-a68c-d3739574ebfc"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "mainview"
+            },
+            "designerId": "b3ec987b-29bb-4374-bf72-78beea5d6700"
+        }
+    ]
+}

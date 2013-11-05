@@ -1,0 +1,42 @@
+{
+    "name": "GridChart",
+    "settings": {
+        "cmd": {},
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "",
+        "exportPath": ""
+    },
+    "xdsVersion": "3.0.0",
+    "xdsBuild": 0,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000002,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "4ec4eb35-f7ef-4626-bcd4-213bcead6256"
+        ],
+        "store": [
+            "bc4a5350-1dc8-4975-bce4-1c63ad57975a",
+            "05b92cf0-647e-4c38-b15e-58a3a5336edd"
+        ],
+        "controller": [
+            "5e208e23-e88e-46c0-be08-c2cba9754ba1"
+        ],
+        "model": [
+            "74c9a82f-781d-4a3f-822b-a85ec685aa1d"
+        ],
+        "resource": [
+            "68325294-a8fa-4ee5-8b4f-538ddb593d15"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

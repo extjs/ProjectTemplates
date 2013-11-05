@@ -1,0 +1,93 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "mainview",
+        "designer|userClassName": "MainView"
+    },
+    "designerId": "aa5f2478-a4ed-46b3-b81d-83caf843d652",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": null,
+                "designer|displayName": "Map panel",
+                "itemId": "mapPanel",
+                "title": "Map"
+            },
+            "designerId": "304a1802-d197-4038-aaed-1d1e62c47ea5",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|createAlias": null,
+                        "designer|displayName": "Map",
+                        "height": "100%",
+                        "itemId": "map"
+                    },
+                    "designerId": "74a63222-6afd-48b4-9167-4a2c9265b487"
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Navigation bar",
+                "docked": "top"
+            },
+            "designerId": "ec89cb14-cd2e-47a5-9b25-7fc715d4353d",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "\"Drop pin\" button",
+                        "docked": null,
+                        "itemId": "dropPinButton",
+                        "text": "Drop"
+                    },
+                    "designerId": "5e3e0e39-98de-414a-b924-302be2dee9b0"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "align": "right",
+                        "designer|displayName": "\"List pins\" button",
+                        "itemId": "listPinsButton",
+                        "text": "Pins"
+                    },
+                    "designerId": "7de169a1-7091-43ae-9f09-f2652d1bdc38"
+                }
+            ]
+        }
+    ]
+}

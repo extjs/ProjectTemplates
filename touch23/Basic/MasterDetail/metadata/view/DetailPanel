@@ -1,0 +1,35 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": false,
+        "designer|userAlias": "detailpanel",
+        "designer|userClassName": "DetailPanel",
+        "docked": null,
+        "id": "detailPanel",
+        "layout": "fit",
+        "padding": 10
+    },
+    "designerId": "b9679d04-5d75-4d0d-a8cd-d624d5897566",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<h1>Hello! {firstName} {lastName}</h1>"
+                ]
+            },
+            "designerId": "7b36f5a0-9b33-452d-9f84-bfeff6070bac"
+        }
+    ]
+}

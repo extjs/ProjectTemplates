@@ -1,0 +1,125 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "formpanel",
+        "designer|userClassName": "FormPanel",
+        "id": "formPanel",
+        "record": null,
+        "scrollable": false
+    },
+    "designerId": "f5b37c5a-f3e2-4ede-8b3c-35668f9ac337",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "record",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Form fieldset",
+                "itemId": "formFieldSet",
+                "scrollable": null,
+                "title": null
+            },
+            "designerId": "4c345b19-57cc-445d-9ccd-2c152d9a55f6",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoCapitalize": true,
+                        "autoComplete": false,
+                        "autoCorrect": true,
+                        "itemId": "nameTextField",
+                        "label": "Name",
+                        "labelWrap": true,
+                        "name": "name",
+                        "placeHolder": "My house",
+                        "required": true
+                    },
+                    "designerId": "834b169f-b434-4837-aad6-c4aa9e8b711b"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "locationTextField",
+                        "label": "Location",
+                        "labelCls": null,
+                        "labelWidth": null,
+                        "labelWrap": true,
+                        "name": "location",
+                        "placeHolder": "8 Fake Ave, Faketown, USA",
+                        "required": true
+                    },
+                    "designerId": "64d1f147-6dcf-4385-be18-a9c5021664a3"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "descriptionTextArea",
+                        "label": "Description",
+                        "labelWidth": null,
+                        "labelWrap": true,
+                        "name": "description"
+                    },
+                    "designerId": "d46f4c7c-0715-471b-abac-29f489c3c5a1"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "saveLocationButton",
+                        "margin": 10,
+                        "text": "Add location"
+                    },
+                    "designerId": "44cd3552-2a6b-49f1-8b61-47004e62234e"
+                },
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 250,
+                        "itemId": "newLocationMap",
+                        "modal": null
+                    },
+                    "designerId": "ce0316d3-60b6-42d0-8c14-83aa238d6e67"
+                }
+            ]
+        }
+    ]
+}
