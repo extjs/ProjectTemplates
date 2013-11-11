@@ -42,7 +42,7 @@ Ext.define('MyApp.controller.Account', {
     showLogin: function(button, e, eOpts) {
 
         var loginForm = Ext.create('widget.loginform'),	// Login form
-            mainView = this.getMainView();					// Main view
+            mainView = this.getMainView();				// Main view
 
         // Navigate to login
         mainView.push({
@@ -55,7 +55,7 @@ Ext.define('MyApp.controller.Account', {
     showRegister: function(button, e, eOpts) {
 
         var registerForm = Ext.create('widget.registerform'),	// Registration form
-            mainView = this.getMainView();							// Main view
+            mainView = this.getMainView();						// Main view
 
         // Navigate to register
         mainView.push({

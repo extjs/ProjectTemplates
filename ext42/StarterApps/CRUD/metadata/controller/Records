@@ -220,7 +220,7 @@
                     "var me = this;\r",
                     "\r",
                     "// Confirm this delete\r",
-                    "Ext.MessageBox.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {\r",
+                    "Ext.Msg.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {\r",
                     "\r",
                     "    // User confirmed yes\r",
                     "    if (btn == 'yes') {\r",

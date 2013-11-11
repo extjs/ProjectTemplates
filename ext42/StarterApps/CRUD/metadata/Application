@@ -13,6 +13,9 @@
             "Record"
         ],
         "name": "MyApp",
+        "requires": [
+            "Ext.window.MessageBox"
+        ],
         "stores": [
             "Records"
         ],

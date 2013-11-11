@@ -112,10 +112,9 @@ Ext.define('TasksList.controller.Tasks', {
     remove: function(button, e, eOpts) {
         var me = this,
             title = 'Delete',
-            message = 'Are you sure you want to delete this task?',
-            messageBox = new Ext.MessageBox();
+            message = 'Are you sure you want to delete this task?';
 
-        messageBox.confirm(title, message, function(response) {
+        Ext.Msg.confirm(title, message, function(response) {
             if (response == 'yes') {
 
         		var mainView = me.getMainView(),

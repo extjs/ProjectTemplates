@@ -20,6 +20,10 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+
+    requires: [
+        'Ext.MessageBox'
+    ],
     models: [
         'Post',
         'Search',

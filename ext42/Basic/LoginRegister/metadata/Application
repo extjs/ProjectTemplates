@@ -10,6 +10,9 @@
             "Account"
         ],
         "name": "MyApp",
+        "requires": [
+            "Ext.window.MessageBox"
+        ],
         "views": [
             "MainView",
             "LoginForm",

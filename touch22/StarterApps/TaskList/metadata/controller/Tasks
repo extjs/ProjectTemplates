@@ -198,10 +198,9 @@
                 "implHandler": [
                     "var me = this,\r",
                     "    title = 'Delete',\r",
-                    "    message = 'Are you sure you want to delete this task?',\r",
-                    "    messageBox = new Ext.MessageBox();\r",
+                    "    message = 'Are you sure you want to delete this task?';\r",
                     "\r",
-                    "messageBox.confirm(title, message, function(response) {\r",
+                    "Ext.Msg.confirm(title, message, function(response) {\r",
                     "    if (response == 'yes') {\r",
                     "\r",
                     "\t\tvar mainView = me.getMainView(),\r",

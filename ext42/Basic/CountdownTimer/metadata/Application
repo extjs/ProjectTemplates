@@ -10,6 +10,9 @@
             "Countdown"
         ],
         "name": "MyApp",
+        "requires": [
+            "Ext.window.MessageBox"
+        ],
         "views": [
             "MainViewport"
         ]

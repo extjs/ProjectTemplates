@@ -139,7 +139,7 @@ Ext.define('MyApp.controller.Tasks', {
         var me = this;
 
         // Confirm this delete
-        Ext.MessageBox.confirm('Confirm', 'Are you sure you want to delete this task?', function(btn) {
+        Ext.Msg.confirm('Confirm', 'Are you sure you want to delete this task?', function(btn) {
 
             // User confirmed yes
             if (btn == 'yes') {

@@ -39,6 +39,9 @@ Ext.application({
         'AddFeed',
         'FeedsList'
     ],
+    requires: [
+        'Ext.MessageBox'
+    ],
     controllers: [
         'Posts',
         'Feeds'

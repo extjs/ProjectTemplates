@@ -20,6 +20,10 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+
+    requires: [
+        'Ext.window.MessageBox'
+    ],
     models: [
         'Record'
     ],

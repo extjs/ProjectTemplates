@@ -13,6 +13,9 @@
             "Task"
         ],
         "name": "MyApp",
+        "requires": [
+            "Ext.window.MessageBox"
+        ],
         "stores": [
             "Tasks",
             "Priorities"

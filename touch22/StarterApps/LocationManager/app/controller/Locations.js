@@ -219,9 +219,8 @@ Ext.define('MyApp.controller.Locations', {
             message = 'Delete ' + record.get('name') + '?';
 
         // Confirm the deletion, and then...
-        var messageBox = new Ext.MessageBox();
         var me = this;
-        messageBox.confirm(title, message, function(response) {
+        Ext.Msg.confirm(title, message, function(response) {
 
             // If we get a "yes"...
             if (response == 'yes') {

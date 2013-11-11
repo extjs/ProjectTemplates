@@ -139,7 +139,7 @@ Ext.define('MyApp.controller.Records', {
         var me = this;
 
         // Confirm this delete
-        Ext.MessageBox.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {
+        Ext.Msg.confirm('Confirm', 'Are you sure you want to delete this record?', function(btn) {
 
             // User confirmed yes
             if (btn == 'yes') {

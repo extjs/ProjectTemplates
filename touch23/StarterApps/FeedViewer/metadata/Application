@@ -16,6 +16,9 @@
             "Feed"
         ],
         "name": "Feed",
+        "requires": [
+            "Ext.MessageBox"
+        ],
         "stores": [
             "Posts",
             "Searches",
